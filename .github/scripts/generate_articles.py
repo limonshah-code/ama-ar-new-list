@@ -618,7 +618,7 @@ def count_generated_prompts():
         print(f"Error counting prompt files: {e}")
         return 0
 
-def send_email_notification(titles, article_urls, prompt_lengths, remaining_keywords, total_prompts, recipient_email="beacleaner0@gmail.com"):
+def send_email_notification(titles, article_urls, prompt_lengths, remaining_keywords, total_prompts, recipient_email="limonseosolution@gmail.com"):
     from_email = "limon.working@gmail.com"
     app_password = os.environ.get("EMAIL_PASSWORD")
     if not app_password:
@@ -627,7 +627,7 @@ def send_email_notification(titles, article_urls, prompt_lengths, remaining_keyw
     msg = MIMEMultipart()
     msg['From'] = from_email
     msg['To'] = recipient_email
-    msg['Subject'] = f"Generated Image and Article Prompts - {datetime.now().strftime('%Y-%m-%d %H:%M')}"
+    msg['Subject'] = f"Generated Image and Article Prompts New- {datetime.now().strftime('%Y-%m-%d %H:%M')}"
     
     api_status = api_key_manager.get_status()
     status_text = "\n\nAPI Key Usage Status:\n"
