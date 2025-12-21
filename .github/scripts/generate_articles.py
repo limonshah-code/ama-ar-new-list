@@ -618,7 +618,7 @@ def count_generated_prompts():
         print(f"Error counting prompt files: {e}")
         return 0
 
-def send_email_notification(titles, article_urls, prompt_lengths, remaining_keywords, total_prompts, recipient_email="limonseosolution@gmail.com"):
+def send_email_notification(titles, article_urls, prompt_lengths, remaining_keywords, total_prompts, recipient_email="limon.working@gmail.com"):
     from_email = "limon.working@gmail.com"
     app_password = os.environ.get("EMAIL_PASSWORD")
     if not app_password:
