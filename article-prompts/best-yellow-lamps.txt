@@ -1,0 +1,336 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2025-12-23T04:44:24Z
+author: "Mason Everett"
+title: "Best Yellow Lamps"
+excerpt: "Discover the yellow lamps to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dky6urpy2/image/upload/v1766378638/blog_image_1766378638_xgefzc.webp
+category: "Reviews"
+tags:
+  - yellow lamps
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-yellow-lamps
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right yellow lamps
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Yellow Lamps" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best Yellow Lamps"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Yellow Lamps"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy yellow lamps?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose yellow lamps?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best yellow lamps for beginners?"
+- "How much should I spend on yellow lamps?"
+- "What features are most important in yellow lamps?"
+- "How do I maintain my yellow lamps?"
+- "Are expensive yellow lamps worth it?"
+- "What brands make the best yellow lamps?"
+- "How long do yellow lamps typically last?"
+- "Can I find good yellow lamps on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with product URL (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B0F1FWKR7B",
+    "title": "PoKat 23\" Yellow Table Lamps Set of 2, Modern Living Room End Table Lamps Decor, Ceramic Lamps for Living Room, Contemporary Nightstand Lamps for Side Console Table Hallway Gift",
+    "url": "https://www.amazon.com/dp/B0F1FWKR7B?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "PoKat",
+    "features": [
+      "- Ceramic are Fragile. Any Issue, Our team is available 24/7.",
+      "INSTALLATION REQUIRED FOR LAMPSHADE: To minimize unnecessary packaging waste, we have sought out the most efficient packing method, allowing you to buy high-quality items at a more affordable price. The yellow lamps set of 2 comes with all installation accessories in the package. Following the instructions, you can set up the ceramic table lamps easily. ( Bulb not Included )",
+      "Lamp dimensions: 23'' (From Bottom to Top) x 5.25\" wide at the bottom. This yellow table lamps for living room are for side table, end table, console table in living rooms, bedside, nightstand table in bedrooms and Girls' Room or dining area. Perfect for Nursery, Home Office Setup, Dress Room, Modern Bedroom Decor, Living Room Enhancements, New Apartment Setup and Home Renovation Project.",
+      "The Sunlit Spark for Your Space: This lamps for bedroom is just like a little sun that brightens up the space! The yellow ceramic base exudes energy, paired with a white fabric lampshade to effortlessly create a modern and stylish atmosphere, making this lamps for night stands the definite \"atmosphere leader\" in the living room's spotlight. This lamps for living room' infuses the home with warm light and trendy texture, decorating your living room in the morning and illuminating your nights. This living room lamps suits modern home styles perfectly, instantly bringing vitality to the space.",
+      "Ideal Gift Option: Pick this bedroom lamp set as a Present\u2014you can\u2019t go wrong. Crafted with high quality and designed for versatile use, This nightstand lamps make an ideal gift for Wedding, Housewarming, Birthday, anniversary, Mother's Day, Thanksgiving, Christmas and New Year to friends, wife, women, mother, grandmother girl and men.",
+      "Reliable After Sales Team: We are proud to offer a 2-year protection plan on all our ceramic lamps, ensuring you have peace of mind with your purchase. Every modern lamps for girls bedroom go through a rigorous quality check before being sold, assuring its reliability and durability. 24/7 available after sales team assists you with any questions or concerns, providing excellent solutions and ensuring your satisfaction. You can rely on us for top-notch products."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41NZgJ+AYbL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41NZgJ+AYbL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41NZgJ+AYbL._SL75_.jpg"
+  },
+  {
+    "asin": "B0F32WPH2H",
+    "title": "26\" Set of 2 Yellow Ceramic Table Lamps with USB A+C Ports & AC Outlet, 3-Way Dimmable Gourd Bedside Nightstand Lamps with White Shade for Bedroom, Living Room, Office",
+    "url": "https://www.amazon.com/dp/B0F32WPH2H?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Cinyirong",
+    "features": [
+      "Exquisite Triple Gourd Lamps\uff1aThis yellow bedside table lamp design with unique triple gourd ceramic lamp body and finished in a natural linen white lampshade which is perfect combination of modern and ceramics style that adds artistic and elegance to your space. Our yellow table lamps not only illuminate your home, but are a unique home decor",
+      "3-Way Dimmable Touch Lamps:Our yellow table lamps are designed with three level brightness to meet your different needs for lighting. Just lightly tap on the built-in sensitive touch sensors to make quickly change brightness level, and response sensitively without delay, saving you from the trouble of fumbling with the switch in the dark. Low-grade is a perfect nightlight for sleeping or nursing, mid-grade is ideal for daily use, and high-grade is excellent for reading, studying and working",
+      "Two LED Bulb and Upgraded Linen Shade:The ceramic table lamps comes with E26 LED Bulbs,800 lumens,2700k, with a 25,000 hour lifespan,it will save up to 90% energy. Natural linen white lampshade softens the light and provides comfortable and natural light, no flicker, no dazzle, has an effect on preserve eyesight. It's perfect decorative lamps to any living room, dining room, bedroom, entry or office",
+      "USB A+C Charging Ports & AC Outlet:Are you bothered by the lack of charging ports when want to charge? The Built in 5V/2.1A USB & TYPE-C Charging Ports and 120V AC power outlet, allowing you to quickly charge 3 DEVICES at the same time, no worries about nowhere to charge your phones, tablets, speaker, etc. The charging function is available whether the rustic table lamp is on or off. Reduce the clutter of wall chargers or outlets while keeping your desk cleaner and tidier",
+      "Yellow Lamps set of 2:We are strict about the quality of modern table lamps. All touch lamps for bedroom have passed the UL standard testing and carefully tested ensure the quality and value for money. Any problem or inquires, please don't hesitate to contact us via Amazon, we will provide you with a satisfying after-sales service.",
+      "Why Choose It? \u2714 Handcrafted Elegance \u2013 Unique ceramic base with a smooth, lustrous finish. \u2714 Versatile Glow \u2013 Soft diffusion for relaxation or adjustable brightness for tasks. \u2714 Timeless Pop of Color \u2013 The vibrant yellow pairs effortlessly with greens, blues, or earthy tones."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41nHGR+IPPL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41nHGR+IPPL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41nHGR+IPPL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DBVKCPNY",
+    "title": "20.75\" Ceramic Table Lamps for Living Room Set of 2, Yellow Flower Lamps for Bedroom Set of 2, Ceramic Bedside Lamp for Nightstand, Farmhouse Rustic Table Lamp for Home Decor",
+    "url": "https://www.amazon.com/dp/B0DBVKCPNY?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "DGGDOME",
+    "features": [
+      "Ceramic Table Lamps Set of 2 for Living Room & Bedroom: Brighten your living room statement table with sunny yellow ceramic lamps set of 2, featuring sunflower textures that add elegant depth. The warm floral design creates a relaxed, nature-inspired vibe in your living room, bedroom, or farmhouse-style spaces\u2014effortlessly blending with modern, rustic, or vintage decor.",
+      "Farmhouse Table Lamps Set of 2 for Small Spaces: With a compact 10\"L x 10\"W x 20.75\"H size, the yellow ceramic lamps set of 2 fit snugly in cozy spots like living room end tables, console tables, entryway consoles or tight bedroom spaces . The textured floral design adds rustic charm without sacrificing space\u2014good choice for farmhouse, modern, or cottage-style homes.",
+      "Yellow Ceramic Bedside Lamps Set of 2 for Nightstand: Designed for bedroom nightstands, this ceramic lamps set of 2 features 10-inch linen lampshades that emit a soft, glare-free glow\u2014ideal for evening reading or winding down. The wide drum shape evenly lights up your bedside area, while the warm yellow ceramic lamp bases add cozy ambiance to modern, farmhouse, or minimalist bedrooms.",
+      "Decorative Ceramic Lamps Set of 2 - Dual Use for Living Room & Home Office: Elevate daytime spaces with these artistic yellow table lamps set of 2, featuring timeless sunflower motifs. Switching seamlessly between home and work, the elegant 10\"L x10\"W x20.75\"H size fits living room consoles, office desks, or statement end tables, blending bold floral charm into modern, traditional, or coastal decoration.",
+      "Traditional Pottery Table Lamps Set of 2 - Timeless Gift & Durable Decor: Handcrafted with durable ceramic and soft linen lampshades \u2014 this versatile lamps set of 2 suits coastal, mid-century modern, or farmhouse decor. Its classic floral design and cream yellow color make it ideal for birthdays, housewarmings, or as a wonderful \"Just because\" surprises."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51tFHFFrlSL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51tFHFFrlSL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51tFHFFrlSL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FF9VL3Q3",
+    "title": "DSYHYL LED Desk Lamp for Home Office, Table Lamp with Pen Holder, 3 Color Modes Reading Light, Eye-Caring Desk Light with Gooseneck, Metal Study Lamp for Dorm Bedside Bedroom (Yellow lamp)",
+    "url": "https://www.amazon.com/dp/B0FF9VL3Q3?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "DSYHYL",
+    "features": [
+      "Eye-Care LED Desk Lamp: Featuring a 7 watt LED bulb (E27 socket compatible with most smart bulbs), offering over 50,000 hours of lifespan. Provides soft, steady, flicker-free light that is friendly to your eyes and perfect for reading, working or studying. Perfect addition to bedrooms, living rooms, home offices, children's study rooms, reading corners, dormitories.",
+      "360\u00b0 Adjustable Desk Lamp: The 360\u00b0 flexible gooseneck table lamp tube allows you to easily adjust the direction of the desk lamp, you can effortlessly adjust the light exactly where you need it, simple and lightweight. It's the perfect study table lamp for kids, back toschool gift, Christmas gift or office gift for coworkers!",
+      "3 Color Mode Dimming: The reading desk lamp is controlled by a push button switch. Turn the lamp on and off continuously to change the color mode: white light 6500k - natural light 4500k - warm light 3000k. Whether you are working on a project, reading a book or relaxing, you can easily adjust the color according to your needs.",
+      "Sturdy Metal Material: The reading light is made of sturdy metal shade and base, modern style yellow matte metal shade surface is easy to clean and prevent fingerprints from staining, the metal construction ensures sturdiness and durability, and the aesthetically pleasing design brings a bright element to your space, making it the perfect decor for your home.",
+      "Multi-functional Pen Holder Design: Our LED table lamp is not only practical but also stylish, the classic yellow metal base with built-in pen holder, phone stand is perfect for storing pens, phone, rulers and other small stationery items to keep your workspace neat and organized. Desk lamps measures 17.72 inches high x 5.91 inches wide with a cable length of 47.24 inches. Fits on any desk or table, great for office desk lamp and reading lamps."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41bjOQmV9sL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41bjOQmV9sL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41bjOQmV9sL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FMFKTQ74",
+    "title": "Rinweey Double Gourd Ceramic Table Lamps Set of 2, Modern Yellow Bedside Lamps for Night Stand, Contemporary Nightstand Lamps for Bedroom Living Room (Bulb Included)",
+    "url": "https://www.amazon.com/dp/B0FMFKTQ74?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Rinweey",
+    "features": [
+      "\u3010Exquisite Double Gourd Lamps\u3011This bedside table lamp design with unique double gourd ceramic lamp body and finished in a natural linen white lampshade which is perfect combination of modern and ceramics style that adds artistic and elegance to your space. Our Rinweey Ceramic table lamps not only illuminate your home, but are a unique home decor(Lamps height 22 inches including lamp head)",
+      "\u3010Unique Ceramic Table Lamps\u3011Unique gourd shape. This yellow table lamp is simple and versatile, especially suitable as your working lamp, bedside lamp and reading lamp on the bedside nightstand, or as a decorative lamp on the living room, providing you with warm and soft lighting",
+      "\u3010Two LED Bulb Included\u3011With the purpose of saving your time to look for compatible bulbs, the double gourd ceramic table lamps comes with E26 LED Bulbs,800 lumens,2700k, with a 25,000 hour lifespan,it will save up to 90% energy",
+      "\u3010Upgraded Linen Shade\u3011Natural linen white lamp shade softens the light and provides comfortable and natural light, no flicker, no dazzle, has an effect on preserve eyesight. It's perfect small table lamps to any living room, dining room, bedroom, entry or office(White Fabric Lampshade requires assembly)",
+      "\u3010Yellow Lamps set of 2\u3011 We are strict about the quality of modern table lamps. All lamps for bedroom have passed the UL standard testing and carefully tested ensure the quality and value for money. Any problem or inquires, please don't hesitate to contact us, we will provide you with a satisfying after-sales service.",
+      "\u3010Customer Focus & Quick Response Service\u3011 The cord,plug,socket,and USB port of this double gourd ceramic table lamps are UL listed, which is is nationally recognized for its standard of safety. All table lamps promised 2 years warranty. If you receive the lamp has damaged/defective/missing part problem, please feel free to tell us, and we will respond within 12 hours, solve the problem ASAP."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41RTyuTsbGL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41RTyuTsbGL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41RTyuTsbGL._SL75_.jpg"
+  },
+  {
+    "asin": "B0BR8LYS3P",
+    "title": "Simple Designs Table Lamp, Mustard Yellow (LT1134-MST)",
+    "url": "https://www.amazon.com/dp/B0BR8LYS3P?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Simple Designs",
+    "features": [
+      "TRADITIONAL DESIGN: A timeless style lamp in a thimble shaped base and a matching TC fabric shade is the perfect lighting addition to your space and can compliment almost any d\u00e9cor style!",
+      "ACCESSIBLE SWITCH: An easily accessible gear (rotary) switch is located on the cord of this table lamp to allow a quick and easy on/off function as needed. Lamp is also equipped with a 5 foot white plug in cord rooted at the base.",
+      "PRODUCT SIZE: Overall product size is L: 5.12\" x W: 5.12\" x H: 10.04\" and weighs 0.77 lbs. The shade of this lamp measures Dia: 5.12\" x H: 5.2\". LAMP IS A MINI LAMP.",
+      "ASSEMBLY & USE: Product ships assembled and will only require you to secure the lamp shade to the base using the provided socket nut prior to use.",
+      "BULB REQUIREMENT SOLD SEPARATELY: This table lamp uses 1 x 40 watt equivalent type B10 E12 candelabra base bulb, which is not included in your purchase but can be easily found online or your local hardware store."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31Njl+FnuoL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31Njl+FnuoL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31Njl+FnuoL._SL75_.jpg"
+  },
+  {
+    "asin": "B0D5QM52CC",
+    "title": "Rinweey Triple Gourd Ceramic Table Lamps Set of 2, Modern Yellow Bedside Lamps with USB A+C Ports & AC Outlet, 3 Way Touch Control Contemporary Nightstand Lamps for Bedroom Living Room",
+    "url": "https://www.amazon.com/dp/B0D5QM52CC?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Rinweey",
+    "features": [
+      "\u3010Exquisite Triple Gourd Lamps\u3011This bedside table lamp design with unique triple gourd ceramic lamp body and finished in a natural linen white lampshade which is perfect combination of modern and ceramics style that adds artistic and elegance to your space. Our cream table lamps not only illuminate your home, but are a unique home decor.",
+      "\u3010USB A+C Charging Ports & AC Outlet\u3011Are you bothered by the lack of charging ports when want to charge? The Built in 5V/2.1A USB & TYPE-C Charging Ports and 120V AC power outlet, allowing you to quickly charge 3 DEVICES at the same time, no worries about nowhere to charge your phones, tablets, speaker, etc. The charging function is available whether the rustic table lamp is on or off. Reduce the clutter of wall chargers or outlets while keeping your desk cleaner and tidier.",
+      "\u30103-Way Dimmable Touch Lamps\u3011Our yellow table lamps are designed with three level brightness to meet your different needs for lighting. Just lightly tap on the built-in sensitive touch sensors to make quickly change brightness level, and response sensitively without delay, saving you from the trouble of fumbling with the switch in the dark. Low-grade is a perfect nightlight for sleeping or nursing, mid-grade is ideal for daily use, and high-grade is excellent for reading, studying and working.",
+      "\u3010Two LED Bulb and Upgraded Linen Shade\u3011The usb table lamps comes with E26 LED Bulbs,800 lumens,2700k, with a 25,000 hour lifespan,it will save up to 90% energy. Natural linen white lampshade softens the light and provides comfortable and natural light, no flicker, no dazzle, has an effect on preserve eyesight. It's perfect decorative lamps to any living room, dining room, bedroom, entry or office.",
+      "\u3010Yellow Lamps set of 2\u3011 We are strict about the quality of modern table lamps. All touch lamps for bedroom have passed the UL standard testing and carefully tested ensure the quality and value for money. Any problem or inquires, please don't hesitate to contact us via Amazon, we will provide you with a satisfying after-sales service."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41EqoFA9r0L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41EqoFA9r0L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41EqoFA9r0L._SL75_.jpg"
+  },
+  {
+    "asin": "B0FM8V9LV7",
+    "title": "Simple Designs LT1166-YLW 16.93\" Glow & Flow Boho Patterned Ceramic Table Lamp, Modern Decorative Accent Lighting, Or Bedroom, Office, Entryway, Living Room, Stylish Bohemian Spaces, Yellow",
+    "url": "https://www.amazon.com/dp/B0FM8V9LV7?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Simple Designs",
+    "features": [
+      "Modern Boho Style: Features a handcrafted ceramic base with intricate tribal-inspired patterns, adding earthy texture and bohemian charm to any d\u00e9cor.",
+      "Warm Ambient Lighting: Topped with a soft linen drum shade that diffuses light beautifully, perfect for creating a cozy, relaxing glow in bedrooms or living spaces.",
+      "Statement D\u00e9cor Piece: Eye-catching hand painted patterns and matte finish elevate your interior design with artisan flair and subtle sophistication.",
+      "Compact and Stylish: Compact yet impactful and great for small spaces where you still want a bold style statement and practical lighting.",
+      "Durable Ceramic Construction Made from high-quality ceramic for lasting beauty and stability on any flat surface."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31vwjopuCDL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31vwjopuCDL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31vwjopuCDL._SL75_.jpg"
+  },
+  {
+    "asin": "B0F2LYXQ9D",
+    "title": "COSYLUX Modern Floor Lamp for Living Room, Industrial Tall Standing Lamp for Bedroom, Metal Shade Reflecting Light Reading Floor Lamp for Office, Nursery Room, Corner(Yellow)",
+    "url": "https://www.amazon.com/dp/B0F2LYXQ9D?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "COSYLUX",
+    "features": [
+      "Stylish and Sleek Standing Lamp: It is a sleek metal floor lamp in the shape of a dome. The simple appearance, elegant curves, and exquisite finishes make this lamp look very decent and generous. It is available in a variety of fashionable colors. It adds an uplifting fashion element to the home or office.",
+      "Soft Reflected Light: The lamp is illuminated by reflecting light and has a domed visor at the bottom of the shade to avoid direct light. So, its light is very soft and not dazzling. While this floor lamp isn't destined to be overly bright, its soft lighting is great for reading and creates a warm lighting atmosphere for your room.",
+      "Wide Application: It's a slim floor lamp that you can place anywhere in the room without looking cramped. By the bed in the bedroom, by the sofa or corner in the living room, in the kid's room or nursery, next to the desk, in the apartment or office, it is a great choice for a floor lamp that is both decorative and functional.",
+      "Dimensions: With a height of 64.6 inches (164 cm), it is not a very tall floor lamp. The pole is slim, and its dome base is only 7.9\" (20 cm) in diameter. So this lamp can be used very well in almost every corner of even a small space. The dome shade has a diameter of 11.8'' (30cm) and a wire length of 7.7ft (235cm) with a foot switch.",
+      "Compatible Bulbs: Standard US E26 medium screw socket. The wall light can be compatible with Edison bulbs, LED bulbs and other E26 bulbs (NO bulbs in the package). The voltage is 110V~130V, and the MAX power is 40W."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31SORL5X4hL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31SORL5X4hL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31SORL5X4hL._SL75_.jpg"
+  },
+  {
+    "asin": "B08KSWFRLT",
+    "title": "JAMBO 16\" Beautiful Lamp- Blue with Yellow/Green Wax, Relaxing Liquid Light, Night Light Nightlight, Home Decor Living Room Office Bedroom Lamp for Adults Teens Kids, Magma Motion",
+    "url": "https://www.amazon.com/dp/B08KSWFRLT?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "JAMBO",
+    "features": [
+      "GORGEOUS LIQUID LAMP- ENHANCE THE AMBIENCE OF ANY ROOM: Turn the lights off and be amazed at the magical qualities of this lamp. The light illuminates the beautiful yellow wax in the lamp, and as it heats it up, the wax floats to the top and then slowly sinks back down. The wax keeps rising and falling, changing colors from a yellow to a beautiful green, creating mesmerizing shapes, and turning any room into a magical wonderland.",
+      "HIGH QUALITY MATERIALS, DURABLE CONSTRUCTION: Rest assured, your Jambo Liquid Lamp will last for years. The Liquid Motion Lamp is specially designed and made with high quality materials and workmanship. You will be thrilled with how stunning this lamp is, how the wax in this lamp flows around the lamp and how long this lamp lasts you.",
+      "CALMING, SOOTHING, AND RELAXING: Ever want to be transported to another magical place? Turn on the Jambo Motion Lamp and be mesmerized and calmed by the flowing motion of the wax as it rises and falls and the calming light that the lamp reflects around the room. This lamp is great for mindfulness, relaxation, and to help you just be.",
+      "PERFECT GIFT FOR ADULTS AND CHILDREN: Both adults and children will absolutely love the Jambo Motion Lamp. This timeless, classical piece is engaging and wonderful for all ages.",
+      "EASY TO USE & MAINTAIN: Simply plug in and watch as the wax flows effortlessly, with no complicated setup required. It's designed to run smoothly with minimal upkeep, providing continuous entertainment and relaxation.",
+      "VERSATILE DECOR: Ideal for any room in your home\u2014whether it's your living room, bedroom, or office\u2014the lamp adds a unique visual effect that enhances your space with its ever-changing, mesmerizing display."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41yUGxgh-3L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41yUGxgh-3L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41yUGxgh-3L._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
