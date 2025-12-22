@@ -1,0 +1,317 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2025-12-23T15:32:54Z
+author: "Mason Everett"
+title: "Best Stir Fry Pans"
+excerpt: "Discover the stir fry pans to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dky6urpy2/image/upload/v1766417550/blog_image_1766417550_kxshut.webp
+category: "Reviews"
+tags:
+  - stir fry pans
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-stir-fry-pans
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right stir fry pans
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Stir Fry Pans" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 9 Best Stir Fry Pans"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Stir Fry Pans"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy stir fry pans?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose stir fry pans?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best stir fry pans for beginners?"
+- "How much should I spend on stir fry pans?"
+- "What features are most important in stir fry pans?"
+- "How do I maintain my stir fry pans?"
+- "Are expensive stir fry pans worth it?"
+- "What brands make the best stir fry pans?"
+- "How long do stir fry pans typically last?"
+- "Can I find good stir fry pans on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with product URL (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B0DR949W42",
+    "title": "Wok, 13 Inch carbon steel woks & stir-fry pans nonstick, Pre-Seasoned 5.8QT Flat Bottom Chinese Wok Paella Pan with lid, Carbon Steel Cookware, Compatible with All Cooktops",
+    "url": "https://www.amazon.com/dp/B0DR949W42?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "FGJ",
+    "features": [
+      "\u3010PRE-SEASON & NATURALLY NONSTICK\u3011Crafted from premium carbon steel, our woks and stir-fry pans deliver exceptional performance. Once properly seasoned, the natural nonstick surface ensures smooth food release for hassle-free cooking. Pre-seasoned at over 1000\u00b0F through advanced nitrogen treatment, these pans offer remarkable strength, superior wear resistance, and excellent protection against corrosion.",
+      "\u3010CLARITY IN CULINARY CREATIONS\u3011 Take your cooking to the next level with our Wok with Glass Lid . Designed for chefs who demand precision, this wok features a clear glass lid that lets you effortlessly monitor your dishes without lifting it. Enjoy the thrill of watching your stir-fry sizzle and ensuring perfect results every time.",
+      "\u3010VERSATILE & CONVENIENT\u3011Crafted from premium black carbon steel, this wok offers exceptional durability and quick heat response,enabling swift adaptation to temperature fluctuations. . Its even heating and easy seasoning make it a kitchen essential. The wide, flat bottom ensures effortless tossing and flipping, while its versatility shines in stir-frying, frying, and boiling.",
+      "\u3010COMPATIBLE WITH ALL STOVETOPS\u3011 The flat bottom allows you to use this wok on just about any cooktop, from gas ranges to induction burners and also will do just fine on the grill or over an open fire.This carbon steel wok is suitable for induction, gas, electric, glass, ceramic and halogen stovetops.",
+      "\u3010USE AND CARE\u3011 Please refer to the user manual before use. Clean the wok in time after use and keep it dry to prevent the wok from rusting. It is best to apply cooking oil after cleaning.Season the wok is still required and over time, additional seasoning should make the surface even more nonstick than it already is.The wok is NOT dishwasher!Wash the wok by hand with warm water,and dry out."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/61vuqYx+kzL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/61vuqYx+kzL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/61vuqYx+kzL._SL75_.jpg"
+  },
+  {
+    "asin": "B084DQYNNM",
+    "title": "YOSUKATA 13.5\" Carbon Steel Wok Pan \u2013 Pre-Seasoned Flat Bottom Pow Wok for Stir Fry, BBQ, Grill & Camping \u2013 Traditional Japanese Chinese Cookware \u2013 Compatible with Induction, Electric, Gas, Open Fire",
+    "url": "https://www.amazon.com/dp/B084DQYNNM?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "YOSUKATA",
+    "features": [
+      "GENUINE TASTE: Bring authentic wok flavor to your kitchen or outdoor cooking with the YOSUKATA 13.5\u201d flat-bottom carbon steel wok. Designed to lock in juices and flavors, this deep wok pan is ideal for preparing Chinese, Japanese, Thai, and other Asian dishes \u2014 the perfect fried rice pan for home or professional use",
+      "PRE-SEASONED: : Unlike many stir fry pans, this carbon steel wok is pre-seasoned at over 600\u00b0F using advanced techniques, offering a better non-stick start right out of the box Like any traditional authentic wok, it will still require proper oil seasoning over time for the best natural non-stick layer performance. No synthetic coatings, this is a wok no PTFE \u2013 100% safe and non-toxic.",
+      "HEAVY-DUTY MATERIALS AND ERGONOMIC HANDLE: Crafted from high-grade black carbon steel, this extra large wok delivers excellent heat distribution and durability \u2014 perfect for high-heat cooking. The ergonomic wooden handle ensures a secure and comfortable grip, whether stir-frying over a gas stove or grilling outdoors.",
+      "MULTIFUNCTIONAL COOKING TOOL: This isn\u2019t just a wok for stir fry. It\u2019s your go-to for pan-frying, braising, deep-frying, searing, smoking, and steaming. Suitable for all stovetops. Compatible with gas, electric, induction, glass cooktops, as well as BBQ grills, camping stoves, and open fire cookware setups \u2014 the ultimate versatile xl wok for both kitchen and outdoor cooking.",
+      "EASY TO USE, EASY TO STORE: Despite its solid construction, the wok is light enough for easy handling and compact for storage. A great addition to both your kitchen cookware and camping gear. Why It's the Best Wok for Stir Fry \u2014 the YOSUKATA carbon steel cookware delivers rich flavor and restaurant-quality results anywhere you cook."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41tg3277LcL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41tg3277LcL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41tg3277LcL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FF4K5WST",
+    "title": "13 Inch Hybrid Stainless Steel Wok with Lid and Steamer Basket, Non Stick Stir Fry Pan, PFOA-Free, Works on Induction, Dishwasher & Oven Safe",
+    "url": "https://www.amazon.com/dp/B0FF4K5WST?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "DOTCLAD",
+    "features": [
+      "\u3010SNOW FLAKE TECHNOLOGY\u3011Our design is created through a laser etching process to provide both stainless steel and non stick surface. This dual surface allows to cook with less oil, grease, and butter.Our clad surface is 50% more than usual Hex surface non stick frying pans.",
+      "\u3010SPECIALITY\u3011Multi-layer compositse steel effectively solves the cooking conduction problem of pure steel and makes quick & even heat transfer for cooking like deep frying, broiling, saut\u00e9ing,and braising.The perfect choice for stir fry vegetables.",
+      "\u3010HIGH-QUALITY MATERIALS\u3011Made with High-quality stainless steel, our stir fry pan is built to last. The healthy surface is completely non toxic for the better balance of utility and performance than Teflon, ceramic,or cast iron pans.",
+      "\u3010EASY TO CLEAN\u3011Thanks to its non-stick surface and easy-to-clean materials, our fry pan makes cleanup a breeze.This is the best induction cookware and kitchen essentials for new home.",
+      "\u3010UNIVERSAL\u3011Our stainless steel woks & stir-fry pans work safe on all types of stovetops, including gas, electric, glass, halogen.Large wok size making it a versatile addition to your handy cookware collection."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31FQexfi84L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31FQexfi84L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31FQexfi84L._SL75_.jpg"
+  },
+  {
+    "asin": "B0DSFPYD9K",
+    "title": "Carbon Steel Wok Pan - 13\" Woks & Stir-Fry Pans Nonstick with Spatula: Flat Bottom Wok for Electric, Induction and Gas Stoves",
+    "url": "https://www.amazon.com/dp/B0DSFPYD9K?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Bretor",
+    "features": [
+      "[Great Value Wok Set ] A perfect carbon steel wok set includes wok pan, wok lid, silicone wok spatula, wok brush. Owning this versatile Chinese wok pan, make your cooking more efficient and convenient, and easily make delicious Asian foods",
+      "[Quality Material & Creative Design] The carbon steel wok is made of Premium black carbon steel, forged at high temperature and professional hand hammering which is enduring. The handle is made of anti-scalding solid wood, which can withstand high temperature cooking and is safe and comfortable to use, also with a detachable and hanging design for more convenient storage. Wok lid with vents can help you to lock the juice and flavor inside ingredients and prevent loss of nutrients",
+      "[Perfect Size & Multi-Purpose] Perfect Size: 13\"W and 3.5\"D. This extra large size wok pan with lid can serve at least 3-5 people of food portions, perfect for family use and gatherings with friends. The nonstick wok can be utilized for a variety of cooking methods, such as stir-frying, deep-fried, boiling, steaming etc. The flat bottom wok is suitable for all types of stoves: induction, electric, halogen, gas",
+      "[Pre-seasoned & Healthy Cooking] The carbon steel pan is pre-seasoned at high temperatures 800F using state-of-the-art nitriding technology before they leave the factory, for non-stick, non- rust, scratch resistant, fast and even heatingand, easy to clean properties. Our nonstick wok not only helps you cook delicious foods with less oil, making your cooking healthier and more secure",
+      "[Excellent Service] We are committed to producing high quality products and providing consumer friendly service. If you encounter any problems in the process of use, please contact us for the first time, our after-sales team is online 24 hours a day to serve you"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41MYZjaPiEL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41MYZjaPiEL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41MYZjaPiEL._SL75_.jpg"
+  },
+  {
+    "asin": "B0D1V6615X",
+    "title": "DOTCLAD Wok pan,Hybrid 13 inch Wok with Lid, PFOA Free Cookware,non stick Stainless Steel Woks & Stir-fry pans Nonstick, Dishwasher and Oven Safe, Works on Induction",
+    "url": "https://www.amazon.com/dp/B0D1V6615X?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "DOTCLAD",
+    "features": [
+      "\u3010SNOW FLAKE TECHNOLOGY\u3011Our design is created through a laser etching process to provide both stainless steel and non stick surface. This dual surface allows to cook with less oil, grease, and butter.Our clad surface is 50% more than usual Hex surface non stick frying pans.",
+      "\u3010SPECIALITY\u3011Multi-layer compositse steel effectively solves the cooking conduction problem of pure steel and makes quick & even heat transfer for cooking like deep frying, broiling, saut\u00e9ing,and braising.The perfect choice for stir fry vegetables.",
+      "\u3010HIGH-QUALITY MATERIALS\u3011Made with High-quality stainless steel, our stir fry pan is built to last. The healthy surface is completely non toxic for the better balance of utility and performance than Teflon, ceramic,or cast iron pans.",
+      "\u3010EASY TO CLEAN\u3011Thanks to its non-stick surface and easy-to-clean materials, our fry pan makes cleanup a breeze.This is the best induction cookware and kitchen essentials for new home.",
+      "\u3010UNIVERSAL\u3011Our stainless steel woks & stir-fry pans work safe on all types of stovetops, including gas, electric, glass, halogen.Large wok size making it a versatile addition to your handy cookware collection."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41qiCzO7HFL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41qiCzO7HFL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41qiCzO7HFL._SL75_.jpg"
+  },
+  {
+    "asin": "B0D1H8B8D2",
+    "title": "Caraway Non-Stick Stir Fry Pan - 12\u201d Wok-Inspired Pan - Free From Forever Chemicals - High-Sloped Walls - Stainless Steel Handles - Cream",
+    "url": "https://www.amazon.com/dp/B0D1H8B8D2?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Caraway",
+    "features": [
+      "WOK-INSPIRED SHAPE: Our 12\u201d Stir Fry Pan features a wok-inspired design with high-sloped walls, allowing for easy food spreading and concentrated heat distribution onto various ingredients.",
+      "NON-TOXIC CERAMIC COATING: Cook with confidence knowing our fry pan is free from forever chemicals and other harmful materials. Our signature ceramic coating ensures your food remains safe and delicious.",
+      "EFFICIENT HEATING: The concentrated heating zone of our wok inspired pan allows for quick searing, while the higher walls make it easy to add more ingredients as you go. Say goodbye to uneven cooking and hello to perfectly cooked meals every time.",
+      "VERSATILE COOKING: From vegetables to grains to proteins, our non-stick pan is designed to do it all. Whether you're stir-frying, saut\u00e9ing, or simmering, this pan will become your go-to kitchen essential for all your cooking adventures.",
+      "EASY TO CLEAN: With our proprietary ceramic coating, cleaning is a breeze. Just a gentle scrub is all it takes to keep your pan in optimal condition, saving you time and water."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31bHaSUvJmL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31bHaSUvJmL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31bHaSUvJmL._SL75_.jpg"
+  },
+  {
+    "asin": "B000ND3GQY",
+    "title": "Cuisinart 14-Inch Stir-Fry Pan, Helper Handle and Glass Cover, Chef's Classic Stainless Steel, 726-38H",
+    "url": "https://www.amazon.com/dp/B000ND3GQY?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Cuisinart",
+    "features": [
+      "EXCEPTIONAL DESIGN: enjoy mirror finish, classic look and professional performance. Aluminum encapsulated base heats quickly and spreads heat evenly\u2013 eliminating hot spots",
+      "PREMIUM COOKING: stainless steel cooking surface does not discolor, react with food or alter flavors. Measurement markings for ease of use, drip free pouring, and flavor lock lid",
+      "EXCEPTIONAL HANDLING: cool grip handles are solid stainless steel riveted handles that stay cool on the stove top and provide a safe a solid grip",
+      "CLEAN UP: dishwasher safe for an easy clean up",
+      "LIFETIME WARRANTY: Refer to user manual for troubleshooting steps and questions surrounding warranty policies \u2013 this product is BPA free"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/310FKl-CQjL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/310FKl-CQjL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/310FKl-CQjL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FBQXWBJN",
+    "title": "MUGAA 12.5\u201d Nonstick Stainless Steel Wok Pan with Lid | Tri-Ply Honeycomb Hybrid Stir-Fry Pan | Nonstick Woks & Stir-Fry Pans | PFOA-Free, Induction, Dishwasher & Oven Safe",
+    "url": "https://www.amazon.com/dp/B0FBQXWBJN?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "MUGAA",
+    "features": [
+      "PROFESSIONAL-QUALITY RESULTS: The 12.5-inch tri-ply honeycomb nonstick wok pan surface delivers restaurant-worthy stir-fry with even heat distribution that eliminates hot spots. Picture yourself effortlessly tossing vegetables and proteins like a professional chef, creating perfectly cooked dishes with beautiful searing and authentic wok hei flavor that will impress your family and guests every single time.",
+      "ULTIMATE VERSATILITY: This induction wok works seamlessly on gas, electric, ceramic, and induction cooktops plus oven-safe to 450\u00b0F, transforming your cooking possibilities. Whether you're mastering traditional stir-fry techniques, searing proteins at high heat, or finishing dishes in the oven, this woks & stir-fry pans delivers professional flexibility in any kitchen setup.",
+      "COOK WITH CONFIDENCE: The scratch-resistant honeycomb coating lets you use metal utensils like tongs, spatulas, and scrapers without fear of damage. Embrace authentic stir-fry techniques with vigorous tossing and scraping, knowing your non stick wok will maintain its flawless surface through years of passionate cooking adventures and culinary experimentation.",
+      "HEALTHIER FAMILY MEALS: The non-toxic, PFOA-free coating requires less oil while preserving natural flavors, creating nutritious dishes your loved ones will crave. Experience the joy of cooking vibrant vegetables that retain their color and nutrients, tender proteins with perfect texture, and aromatic rice dishes that taste incredibly fresh and wholesome with this wok with lid.",
+      "EFFORTLESS CLEANUP: The dishwasher-safe design and premium stainless steel construction make cleanup quick and easy after even the most ambitious cooking sessions. Spend less time scrubbing and more time savoring your culinary masterpieces with family, knowing this durable stir fry pan will look beautiful and perform flawlessly for years to come."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51vac17lNXL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51vac17lNXL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51vac17lNXL._SL75_.jpg"
+  },
+  {
+    "asin": "B0CWS6XHJJ",
+    "title": "Teewe Carbon Steel Wok -13 Inch Woks & Stir-fry Pans Nonstick, Wok Pan with Lid Spatula and Dish Brush: Pre-Seasoned Flat Bottom Chinese Woks for Induction, Electric, Gas, All Stoves",
+    "url": "https://www.amazon.com/dp/B0CWS6XHJJ?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Teewe",
+    "features": [
+      "[Upgrade Modern Non-Stick Technology] After a long time of research and development, we have developed a new non-stick wok technology to bring you a brand new cooking experience. NOTE: The rough and granular effect on the surface of the wok is a natural non-stick layer formed by the state-of-the-art non-stick technology, which prevents food from sticking to the pan, burning, rusting and is easy to clean",
+      "[New Upgraded Wok Set] The carbon steel wok set has a wok pan with lid, wok spatula, dish brush. Perfect size - 13\" wide & 3.9 inches deep, can serve at least 3-5 people of food portions, simply the perfect choice for family gatherings. Stir frying wok can meet your various cooking needs, like pan-frying, stir-frying, deep-frying, braising, and steaming etc",
+      "[Pre-seasoned & Nonstick Wok] Our wok pan is pre-seasoned at 1000F Celsius using modern unique nitriding technology, which develops enduring and natural non-stick coating properties. This wok pan is not only non-rusting, corrosion resistant, easy to clean, but also have rich in iron, so that don't have to worry about the coating falling off and harmful substances, helps you cook original food with less oil",
+      "[Premium & Enduring Carbon Steel] The large wok pan is made of heavy-duty black carbon steel material, upgraded production process, so it superior performance and durability for lifetime using. The wok light weight and responds to heat changes quickly evenly, saves cooking time which makes your cooking more efficient",
+      "[Thoughtful Detail Design] The flat bottom wok are selected with high-grade lids that fit perfectly match the pan, detachable solid handle, not hot and easy to store,also easy to use in the oven, upgraded silicone spatula prevents the inside of the wok from scratching. Flat bottom design wok pan, suitable for any stoves, such as induction, gas stoves, electric stoves, and other heat sources. This multifunctional Asian cookware wok will be the best gift you can give to your family and friends",
+      "[Excellent Service & Warranty] We are committed to providing the best cooking wok for every cooking enthusiast, making every customer satisfied is our ultimate mission. If you have any problems, we are here for you 24 hours a day. Welcoming to the next generation of cookware"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41YbQC1RdaL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41YbQC1RdaL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41YbQC1RdaL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
