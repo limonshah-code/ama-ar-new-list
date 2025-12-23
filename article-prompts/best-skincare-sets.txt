@@ -1,0 +1,332 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2025-12-24T12:20:09Z
+author: "Mason Everett"
+title: "Best Skincare Sets"
+excerpt: "Discover the skincare sets to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dky6urpy2/image/upload/v1766492383/blog_image_1766492383_kmi3ah.webp
+category: "Reviews"
+tags:
+  - skincare sets
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-skincare-sets
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right skincare sets
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Skincare Sets" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best Skincare Sets"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Skincare Sets"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy skincare sets?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose skincare sets?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best skincare sets for beginners?"
+- "How much should I spend on skincare sets?"
+- "What features are most important in skincare sets?"
+- "How do I maintain my skincare sets?"
+- "Are expensive skincare sets worth it?"
+- "What brands make the best skincare sets?"
+- "How long do skincare sets typically last?"
+- "Can I find good skincare sets on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with product URL (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B0FBHD352Q",
+    "title": "La Roche-Posay Dry Skin Saver Gift Set with Toleriane Hydrating Gentle Cleanser Face Wash 50ml, Double Repair Face Moisturizer 40ml & Cicaplast B5+ 40ml, Travel Size Face Cleanser & Face Lotion Set",
+    "url": "https://www.amazon.com/dp/B0FBHD352Q?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "La Roche-Posay",
+    "features": [
+      "Hyaluronic acid-boosting skincare set includes travel size: Toleriane Hydrating Gentle Cleanser 50ml, Double Repair Face Moisturizer 40ml, and Cicaplast Balm B5+ 40ml for dry, sensitive skin care at home or on the go",
+      "Toleriane Hydrating Gentle Cleanser: Daily gentle face cleanser for normal to dry, sensitive skin; a hydrating facial cleanser that removes dirt, makeup, and impurities while maintaining the skin\u2019s moisture barrier",
+      "Toleriane Hydrating Gentle Cleanser: Formulated with niacinamide, ceramide\u20113, and La Roche-Posay prebiotic thermal spring water; this cleanser supports a healthy skin barrier and complements routines that use a hyaluronic acid moisturizer",
+      "Toleriane Double Repair Face Moisturizer: Daily moisturizer for face delivers long\u2011lasting hydration; face moisturizer for sensitive skin helps restore the skin\u2019s protective barrier for a healthier, rebalanced complexion",
+      "Toleriane Double Repair Face Moisturizer: Moisturizer for dry skin. Non\u2011comedogenic facial moisturizer for dry skin and daily moisturizer suitable for women and men; pairs well under SPF and with hyaluronic acid",
+      "Cicaplast Balm B5+: Soothing cream and non\u2011greasy skin protectant for face, lips, hands, and body; helps comfort cracked, chapped, and chafed areas and dry, rough skin irritations"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41dg8dU5D0L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41dg8dU5D0L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41dg8dU5D0L._SL75_.jpg"
+  },
+  {
+    "asin": "B0CG516MWS",
+    "title": "The Ordinary The Acne Set, 3-Step Skin Regimen with Glucoside Foaming Cleanser, Salicylic Acid 2% Solution, and Natural Moisturizing Factors + Beta Glucan | Skin Care Set",
+    "url": "https://www.amazon.com/dp/B0CG516MWS?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "The Ordinary",
+    "features": [
+      "COMPLETE 3-STEP REGIMEN: Targets acne-prone skin with a focused routine using cleanser, treatment, and moisturizer.",
+      "EFFECTIVE EXFOLIATION WITH SALICYLIC ACID 2%: Helps clear pores, reduces acne, and encourages the natural shedding of dead skin cells.",
+      "GENTLE, FOAMING CLEANSER: Glucoside Foaming Cleanser removes impurities while respecting delicate skin, even suitable for sensitive skin types, including babies.",
+      "ALL-DAY HYDRATION: Natural Moisturizing Factors + Beta Glucan provides lightweight, long-lasting hydration and strengthens the skin barrier.",
+      "SUITED FOR TEENS AND ADULTS: This set is formulated to treat and prevent acne across a range of age groups."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/319c741K0ZL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/319c741K0ZL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/319c741K0ZL._SL75_.jpg"
+  },
+  {
+    "asin": "B0F384Y1KR",
+    "title": "Anua 3-Step Glass Skin Beginner Set, Double Cleansing with Facial Serum, Oil Cleanser & Face Wash with Heartleaf, Daily Routine with Niacinamide, Korean Skincare Set",
+    "url": "https://www.amazon.com/dp/B0F384Y1KR?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "ANUA",
+    "features": [
+      "[3-STEP GLASS SKIN ROUTINE] Achieve visibly radiant, smooth skin with this beginner-friendly set \u2014 start with deep cleansing oil, refresh with gentle foaming wash, and brighten with TXA serum for that coveted glass skin glow.",
+      "[STEP 1: DEEP CLEANSING OIL] A deep pore cleanser that won\u2019t clog pores, effective in removing makeup residue and sebum. An essential step for double cleansing, delivering glowy, glass skin results.",
+      "[STEP 2: GENTLE CLEANSER] Creates a delicate light foam infused with Heartleaf Extract, making it gentle enough for all skin types, especially suitable for deep cleansing oily, combination skin.",
+      "[STEP 3: Viral TXA SERUM] A daily serum designed to enhance skin clarity and balance with three active ingredients\u2014Niacinamide, TXA, and Arbutin. Naturally pigmented with Vitamin B for a radiant, even complexion."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31O6K0Qp4sL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31O6K0Qp4sL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31O6K0Qp4sL._SL75_.jpg"
+  },
+  {
+    "asin": "B0BKQ451Z6",
+    "title": "Peach & Lily - Glass Skin Discovery Kit (4 Products) - 1 Cleanser, 1 Essence, 1 Serum & 1 Cream - Skin Care Set - Acne Routine - Travel Essentials - Self Care - Vegan & Cruelty Free - Korean Beauty",
+    "url": "https://www.amazon.com/dp/B0BKQ451Z6?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Peach & Lily",
+    "features": [
+      "Skin That Glows Like Glass - Looking for skin so healthy that pores look smooth and skin looks luminous? Our Glass Skin Discovery Kit features our iconic 4-step Glass Skin routine in convenient travel size toiletries.",
+      "Korean Skincare Gift Set - Power Calm Hydrating Gel Cleanser (1.0 oz), Wild Dew Treatment Essence (1.0 oz), Glass Skin Refining Serum (0.5 oz), and Matcha Pudding Antioxidant Cream (0.67 oz). Everything you need to achieve Glass Skin.",
+      "4-Step Regimen - Step 1: Power Calm Hydrating Gel Cleanser: Dispense, lather with water, and apply to face. Rinse with water and pat dry. Step 2: Wild Dew Treatment Essence: Pat onto clean skin with hands or cotton pads.",
+      "Glass Skin Routine - Step 3: Glass Skin Refining Serum: Pat onto clean, dry skin. Step 4: Matcha Pudding Antioxidant Cream: Pat or massage onto face and neck. All products can be used daily, AM and PM and are travel safe.",
+      "Peach & Lily - 100% worry free, clean beauty, clinically effective, safe for sensitive skin, vegan, sustainable, and cruelty-free. Powered by Korean Skin Care innovations, we help you achieve your Glass Skin goals."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/4175X5g6BQL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/4175X5g6BQL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/4175X5g6BQL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FBHQS474",
+    "title": "La Roche-Posay Hydration Heroes Gift Set \u2014 Toleriane Hydrating Gentle Cleanser 50ml, Double Repair Face Moisturizer 40ml & Hyalu B5 Hyaluronic Acid Serum 30ml, Travel Face Cleanser & Face Lotion Set",
+    "url": "https://www.amazon.com/dp/B0FBHQS474?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "La Roche-Posay",
+    "features": [
+      "Skincare set Includes travel size Toleriane Hydrating Gentle Cleanser 50ml, Double Repair Face Moisturizer 40ml, and Hyalu B5 serum 30ml\u2014complete skincare set for cleansing, hydrating, and anti aging care at home or on the go",
+      "Hydrating facial cleanser for daily use: Toleriane Hydrating Gentle Cleanser is a gentle facial cleanser and moisturizing face wash that removes dirt and makeup while helping retain essential moisture; ideal cleanser for dry skin",
+      "Daily facial cleanser: Formulated with niacinamide, ceramide-3, glycerin, and La Roche-Posay Prebiotic Thermal Water to support the skin barrier; a gentle face cleanser suitable for sensitive skin",
+      "Hyalu B5 pure hyaluronic acid serum for face: This anti aging serum with pure hyaluronic acid, vitamin B5 (panthenol), and madecassoside visibly plumps skin, improves elasticity, and helps reduce the look of fine lines and wrinkles",
+      "Daily moisturizer for face: Toleriane Double Repair Face Moisturizer is a lightweight moisturizer and facial moisturizer for dry skin that restores the skin\u2019s natural protective barrier in 1 hour and delivers up to 48-hour hydration",
+      "Face moisturizer for dry skin and daily face moisturizer: Oil-free, non-comedogenic dry skin face moisturizer provides comfortable, long-lasting hydration without clogging pores; suitable for all skin types, including sensitive"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/416duQemyUL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/416duQemyUL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/416duQemyUL._SL75_.jpg"
+  },
+  {
+    "asin": "B08T7DSZYD",
+    "title": "e.l.f. SKIN Holy Hydration! Hydrated Ever After Skincare Mini Kit, Cleanser, Makeup Remover, Moisturizer & Eye Cream For Hydrating Skin, Airplane-Friendly Sizes",
+    "url": "https://www.amazon.com/dp/B08T7DSZYD?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "e.l.f.",
+    "features": [
+      "A COMPLETE HYDRATION REGIMEN: This skincare kit has all of your favorite Holy Hydration necessities- a Holy Hydration. Daily Cleanser, Holy Hydration. Makeup Melting Cleansing Balm, Hydrating Booster Drops, Holy Hydration. Face Cream and Eye Cream.",
+      "CLEANS and NOURISHES SKIN: This step-by-step skincare regimen will have your face feeling soft, supple and hydrated no matter where you are \u2013 think of it as your face\u2019s happily ever after.",
+      "INFUSED WITH HYALURONIC ACID: e.l.f. SKIN's Hoy Hydration. products are infused with Hyaluronic acid to help hydrate and plump the skin, Ceramides to help build up the skin's moisture barrier, and Peptides for refreshing complexion.",
+      "TRAVEL-FRIENDLY SIZES: All of the products in the Hydrated Ever After Skincare Mini Kit are travel-friendly sizes so you can take it wherever you go.",
+      "VEGAN & CRUELTY-FREE: e.l.f. stands with every eye, lip, face, paw and fin. Proudly vegan, e.l.f. is double-certified cruelty-free by Leaping Bunny & PETA."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41RwmDq9rML._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41RwmDq9rML._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41RwmDq9rML._SL75_.jpg"
+  },
+  {
+    "asin": "B0FGK1XVSV",
+    "title": "BYOMA Universal Skincare Heroes (5-Piece Kit) - Skincare Gift Set with Jelly Cleanser, Milky Toner, Hydrating Serum, Gel Cream & SPF 50 - Skin Barrier Repair Gift Set with Makeup Bag",
+    "url": "https://www.amazon.com/dp/B0FGK1XVSV?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "BYOMA",
+    "features": [
+      "BACK TO THE BASICS: Meet our Universal Starter Kit for hydrated, glowing skin. This 5-step routine boosts, build + protects skin, serving as the building blocks to your best skin. Clincally proven to maintain + protect the skin barrier.",
+      "HYDRATE + REBUILD: Skin-loving ingredients work to rebuild + protect the skin barrier. Powerful humectants lock in moisture to minimize trans-epidermal water loss (TEWL).",
+      "BARRIER-BOOSTING: BYOMA\u2019s carefully researched Tri-Ceramide Complex is designed to mimic and replenish the essential lipids found in skin. Formulated to rebuild the skin barrier + restore moisture levels, ensuring skin functions at its best every day.",
+      "THE ULTIMATE SKIN-COMPATIBLE SOLUTION: Dermatologist tested + approved skin care, soap-free, non-comedogenic, alcohol + fragrance-free, vegan + cruelty free. Suitable for all skin types.",
+      "BACKED BY SCIENCE: Efficacy is the new luxury. That's why BYOMA delivers clinically-proven formulas backed by science + powered by actives. When we stop stripping our skin + start boosting our barrier, we find the key to balanced, brighter skin."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41Vu5+i2XaL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41Vu5+i2XaL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41Vu5+i2XaL._SL75_.jpg"
+  },
+  {
+    "asin": "B07YPX9N6X",
+    "title": "The Ordinary The Daily Set, Daily Skincare Routine with Squalane Cleanser, Hyaluronic Acid 2% + B5, and Natural Moisturizing Factors + HA | Skin Care Set",
+    "url": "https://www.amazon.com/dp/B07YPX9N6X?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "The Ordinary",
+    "features": [
+      "COMPLETE DAILY ROUTINE: A 3-step regimen featuring cleanser, hydration serum, and moisturizer for a healthy-looking skin routine.",
+      "GENTLE CLEANSING: Squalane Cleanser removes makeup and impurities while hydrating and supporting the skin\u2019s moisture barrier.",
+      "HYDRATION BOOST: Hyaluronic Acid 2% + B5 serum delivers deep hydration with five forms of hyaluronic acid for softer, plumper skin.",
+      "MOISTURIZES & PROTECTS: Natural Moisturizing Factors + HA strengthens the skin\u2019s hydration barrier and provides long-term moisture.",
+      "SUITABLE FOR ALL SKIN TYPES: This set is perfect for dry, oily, combination, or sensitive skin types, supporting hydration and barrier repair."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31boaAsTGdL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31boaAsTGdL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31boaAsTGdL._SL75_.jpg"
+  },
+  {
+    "asin": "B0CTKSB91T",
+    "title": "LANEIGE Icons To Go Set: Cream Skin, Water Bank Cream, Lip Sleeping Mask, Water Sleeping Mask, Travel Size, Full Size, Hydrate, Barrier-Boosting",
+    "url": "https://www.amazon.com/dp/B0CTKSB91T?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "LANEIGE",
+    "features": [
+      "Discover the best of LANEIGE in this limited-edition set featuring four must-have minis: Cream Skin Toner & Moisturizer, Water Bank Blue Hyaluronic Cream Moisturizer, Water Sleeping Mask, and Lip Sleeping Mask in Berry for the ultimate Korean skincare routine.",
+      "Highlighted Ingredients: Blue Hyaluronic Acid (Blue HA) (Water Bank Cream Moisturizer): Delivers effective, long-lasting hydration. Ceramide and Peptide Complex (Cream Skin Toner & Moisturizer): Intense, nurturing hydration and visibly firming benefits.",
+      "Skin Type: Normal, Dry, Combination, and Oily",
+      "Skincare Concerns: Dryness, Dullness, and Loss of Firmness and Elast"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31AdNhwduGL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31AdNhwduGL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31AdNhwduGL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FKV91PWL",
+    "title": "Neutrogena 7 Days of Skincare Set ($56.00 Value), Daily Skin Care Essentials \u2013 Face Wash, Facial Moisturizer, Makeup Remover Wipes, Pimple Patches & More, 7 Full & Travel Size Toiletries",
+    "url": "https://www.amazon.com/dp/B0FKV91PWL?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Neutrogena",
+    "features": [
+      "7 Days of Skincare Gift Set from Neutrogena includes 7 daily skincare essentials \u2013 acne patches, face wash, moisturizer, makeup wipes, face & lip mask, and hand cream. Perfect for the holidays and beyond, with over $25.00 in savings",
+      "The skincare set includes Sensitive Skin Blemish Patches to shrink the look of pimples, Ultra-Soft Makeup Remover Wipes to gently cleanse & remove makeup, & Norwegian Formula Glycerin-Rich Hand Cream to moisturize rough, dry skin",
+      "The gift set offers a $56.00 value (based on individual retail SRP) and includes some of your favorite Hydro Boost products which are formulated with hyaluronic acid and designed to deliver lasting hydration & a refreshed, healthy-looking glow",
+      "It includes the Hydro Boost Hydrating Gel Face Wash to gently cleanse skin, 100% Hydrogel Face Mask to quench dry skin with moisture, Water Gel Facial Moisturizer for refreshed, dewy skin, & a Lip Sleeping Mask to leave dry lips soft & supple",
+      "This skincare gift set makes a thoughtful gift for anyone who wishes to elevate their daily skincare routines, & the convenient Travel Size Toiletries make it easy to take your routine with you wherever your holiday plans, or everyday adventures"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41Xbk2-Rx0L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41Xbk2-Rx0L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41Xbk2-Rx0L._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
