@@ -1,0 +1,326 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2025-12-24T23:04:48Z
+author: "Mason Everett"
+title: "Best Garden Arbours"
+excerpt: "Discover the garden arbours to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dky6urpy2/image/upload/v1766531061/blog_image_1766531061_dql9cq.webp
+category: "Reviews"
+tags:
+  - garden arbours
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-garden-arbours
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right garden arbours
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Garden Arbours" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best Garden Arbours"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Garden Arbours"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy garden arbours?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose garden arbours?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best garden arbours for beginners?"
+- "How much should I spend on garden arbours?"
+- "What features are most important in garden arbours?"
+- "How do I maintain my garden arbours?"
+- "Are expensive garden arbours worth it?"
+- "What brands make the best garden arbours?"
+- "How long do garden arbours typically last?"
+- "Can I find good garden arbours on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with product URL (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "0711261903",
+    "title": "The Kew Gardener's Guide to Growing Roses: The Art and Science to Grow with Confidence (Volume 8) (Kew Experts, 8)",
+    "url": "https://www.amazon.com/dp/0711261903?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Frances Lincoln",
+    "features": [],
+    "image_large": "https://m.media-amazon.com/images/I/510R-fVj+6L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/510R-fVj+6L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/510R-fVj+6L._SL75_.jpg"
+  },
+  {
+    "asin": "B0B81HRS9L",
+    "title": "Outvita 7Ft Garden Arch Arbor, Steel Frame Stand Trellis, Arbour Archway for Wedding Ceremony Decoration Plant Climbing Rose Vines Lawn Courtyard Patio Black",
+    "url": "https://www.amazon.com/dp/B0B81HRS9L?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Outvita",
+    "features": [
+      "\u3010DURABLE MATERLAL & STABLE STRUCTURE\u3011This wedding arch is made of iron material with weather-resistant powder coated, which has a long service life and prevent wear and weathering. Ground hole-maker design on the bottem allows you to insert it 9.6 inch into the ground to ensure the trellis for climbing plants outdoor more stable and",
+      "\u3010DELICATE APPERANCE\u3011Exquisite workmanship ensures that every corner and surface of the arch is smooth and burr-free. The graceful garden arch create a beautiful entrance to your garden with its delicate lines and vintage apperances. These outdoor metal arbor trellis add a striking focal point to your yard even without climbing plants and decorations",
+      "\u3010GREAT FOR EVENTS\u3011The wedding arch arbor provides an archway for climbing plants and are a graceful entrance to your garden, patio or walkway, perfectly decorating your garden and yard. This walkway trellis is also great for weddings, anniversaries, birthday party, Christmas or other important occasions decoration",
+      "\u3010PLANT CLIMBING SUPPORT\u3011The metal plant trellis is an environmental structure for the growth of the various climbing plants, vines, rose bushes and vegetables, which is provide plenty of support for them. The spacious top shelf add more growth space for plants. There's nothing better than this pastoral decoration",
+      "\u3010EASY ASSEMBLY\u3011Comes with high-quality hardware. Pre-cut and pre-drilled holes with reinforced insert nut for easy assembly. We also provide complete installation detailed instructions to help you have a hassle-free installation within 15 minutes. OVERALL DIMENSIONS: (81.1x 16.1 x 85)\" (L x W x H)"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31xumyfiE6L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31xumyfiE6L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31xumyfiE6L._SL75_.jpg"
+  },
+  {
+    "asin": "B0CHFG49NJ",
+    "title": "Outvita 7FT Garden Arch Arbor with Entry Door, Heavy Duty Metal Arbour Archway, Decorative Frame Stand Trellis with Ground Stakes for Wedding Ceremony Party Plant Climbing Rose Vines Patio Black",
+    "url": "https://www.amazon.com/dp/B0CHFG49NJ?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Outvita",
+    "features": [
+      "\u3010UPGRADE STABILITY\u3011This wedding arch is made of iron material with weather-resistant powder coated for long service life and protection from abrasion and weathering. Compare to other garden arch on the market, our iron garden archway features double-layer design with 6 ground stakes that allow you to insert it 6.5 inches into the ground to ensure it can withstand storms, blizzards and other harsh weather",
+      "\u3010PLANT CLIMBING SUPPORT\u3011The metal plant trellis is an environmental structure for the growth of the various climbing plants, vines, rose bushes and vegetables. Heavy duty structure is designed to provide plenty of support for all types of climbing plants and vegetables. There's nothing better than this pastoral decoration",
+      "\u3010DELICATE APPERANCE\u3011Exquisite workmanship ensures that every corner and surface of the arch is smooth and burr-free. The graceful garden arch create a beautiful entrance to your garden with its delicate lines and vintage apperances. Uniquely styled door with deadbolt serves as entrance to your patio, adding a striking focal point to your yard",
+      "\u3010GREAT FOR EVENTS\u3011This walkway trellis is also great for weddings, anniversaries, birthday party, Christmas or other important occasions decoration. Decorate it with balloons, leaves, party banners, tulle, LED fairy lights or anything else you want, makes your events classic and fabulous",
+      "\u3010EASY ASSEMBLY\u3011Comes with high-quality hardware. Pre-cut and pre-drilled holes with reinforced insert nut for easy assembly. We also provide complete installation detailed instructions to help you have a hassle-free installation within 15 minutes. OVERALL DIMENSIONS: (53 x 23 x 84)\" (L x W x H)"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51q3DELksgL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51q3DELksgL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51q3DELksgL._SL75_.jpg"
+  },
+  {
+    "asin": "B072V7XL28",
+    "title": "OUTOUR French Style Birdcage Shape Heavy Duty Gazebo,9'Highx 6\u20186\"Wide,Pergola Pavilion Arch Arbor Arbour Plants Stand Rack for Wedding Outdoor Garden Lawn Backyard Patio,Climbing Vines,Roses,Dark Rust",
+    "url": "https://www.amazon.com/dp/B072V7XL28?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "OUTOUR",
+    "features": [
+      "WONDERFUL SHOWCASE. The birdcage shape and four tall side panels make the structure a nice choice for climbing vines like ivy, clematis, wisteria, grape vines, flowers and more \u2014 allows them to grow naturally up towards the top.",
+      "DECORATE IT AS YOU WISH: It' s the charming center in your garden, and great for peaceful meditation, weddings or other outdoor ceremonies.",
+      "DURABLY BUILT: Made of strong, powder-coated wrought iron, this enchanting gazebo arch can stand up to harsh outdoor elements for high-quality performance and good looks throughout the year.",
+      "FUNNY ASSEMBLY: Requires a friend to help you for some easy assembly and ground stakes come included to secure the panels into the ground.",
+      "OVERALL DIMENSIONS: 106 inches high x 79 inches long x 79 inches wide; 30- pounds."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41HJUVv7bxL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41HJUVv7bxL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41HJUVv7bxL._SL75_.jpg"
+  },
+  {
+    "asin": "B0CQXPDCGB",
+    "title": "VINGLI Wooden Garden Arbor with Planter, Wedding Arch for Ceremony, Wood Garden Arbour Trellis for Plant Climbing, Pergola for Garden Backyard, Lawn, Outdoor",
+    "url": "https://www.amazon.com/dp/B0CQXPDCGB?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "VINGLI",
+    "features": [
+      "\u3010Durable Wooden Arbor\u3011Made of fir wood with fully sanded, this garden arbor is strong and durable. Natural solid wood material is painted to ensure long lifespan in outdoors",
+      "\u3010Stable Structure with 2 Planter Box\u3011The wooden garden arbor, which comes with 2 planter boxes, is designed to provide stability for holding a wide variety of plants. It features a convenient hole at the bottom to facilitate water out and maintain soil nutrient",
+      "\u3010Climbing Plants Trellis\u3011The garden trellis are perfectly crafted to accommodate and provide ample support for all types of climbing plants and vegetables. The meticulously designed trellises offer sturdy and reliable support for your vibrant climbing flowers, thriving vegetable plants, fragrant rose bushes, and enchanting vines, allowing them to flourish and grow vertically, thus maximizing the space in your garden",
+      "\u3010Beautiful Design\u3011 This elegant arch can be easily covered in beautiful vines, branches, colorful flowers, or delicate fabric, creating a surreal and sophisticated setting for the ceremony. With planter, you can local any place",
+      "\u3010Easy to install\u3011This garden arch comes with all necessary hardware and installation tools. You can easily install it on your own according to the installation instructions"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41YSzzxQalL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41YSzzxQalL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41YSzzxQalL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FGJD146S",
+    "title": "VINGLI Wooden Garden Arbor with Planter, Wedding Arch for Ceremony, Wood Garden Arbour Trellis for Plant Climbing, Pergola for Garden Backyard, Lawn, Outdoor (Carbonized Wood)",
+    "url": "https://www.amazon.com/dp/B0FGJD146S?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "VINGLI",
+    "features": [
+      "\u3010Durable Wooden Arbor\u3011Made of fir wood with fully sanded, this garden arbor is strong and durable. Natural solid wood material is painted to ensure long lifespan in outdoors",
+      "\u3010Stable Structure with 2 Planter Box\u3011The wooden garden arbor, which comes with 2 planter boxes, is designed to provide stability for holding a wide variety of plants. It features a convenient hole at the bottom to facilitate water out and maintain soil nutrient",
+      "\u3010Climbing Plants Trellis\u3011The garden trellis are perfectly crafted to accommodate and provide ample support for all types of climbing plants and vegetables. The meticulously designed trellises offer sturdy and reliable support for your vibrant climbing flowers, thriving vegetable plants, fragrant rose bushes, and enchanting vines, allowing them to flourish and grow vertically, thus maximizing the space in your garden",
+      "\u3010Beautiful Design\u3011 This elegant arch can be easily covered in beautiful vines, branches, colorful flowers, or delicate fabric, creating a surreal and sophisticated setting for the ceremony. With planter, you can local any place",
+      "\u3010Easy to install\u3011This garden arch comes with all necessary hardware and installation tools. You can easily install it on your own according to the installation instructions"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41Etx87qN+L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41Etx87qN+L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41Etx87qN+L._SL75_.jpg"
+  },
+  {
+    "asin": "B0BQXK9CL9",
+    "title": "Outvita 7.3FT Garden Arch Arbor, Heavy Duty Metal Arbour Archway, Decorative Frame Stand Trellis with Ground Stakes for Wedding Ceremony Party Plant Climbing Rose Vines Lawn Patio Black",
+    "url": "https://www.amazon.com/dp/B0BQXK9CL9?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Outvita",
+    "features": [
+      "\u3010UPGRADE STABILITY\u3011This wedding arch is made of iron material with weather-resistant powder coated for long service life and protection from abrasion and weathering. 4 ground stakes that allow you to insert it 7.8 inches into the ground to ensure it can withstand storms, blizzards and other harsh weather",
+      "\u3010PLANT CLIMBING SUPPORT\u3011The metal plant trellis is an environmental structure for the growth of the various climbing plants, vines, rose bushes and vegetables. Heavy duty structure is designed to provide plenty of support for all types of climbing plants and vegetables. There's nothing better than this pastoral decoration",
+      "\u3010DELICATE APPERANCE\u3011Exquisite workmanship ensures that every corner and surface of the arch is smooth and burr-free. The graceful garden arch create a beautiful entrance to your garden with its delicate lines and vintage apperances. These outdoor metal arbor trellis add a striking focal point to your yard even without climbing plants and decorations",
+      "\u3010GREAT FOR EVENTS\u3011This walkway trellis is also great for weddings, anniversaries, birthday party, Christmas or other important occasions decoration. Decorate it with balloons, leaves, party banners, tulle, LED fairy lights or anything else you want, makes your events classic and fabulous",
+      "\u3010EASY ASSEMBLY\u3011Comes with high-quality hardware. Pre-cut and pre-drilled holes with reinforced insert nut for easy assembly. We also provide complete installation detailed instructions to help you have a hassle-free installation within 15 minutes. OVERALL DIMENSIONS: (46.65 x 22.04 x 87.2)\" (L x W x H)"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31gdm4mKxkL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31gdm4mKxkL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31gdm4mKxkL._SL75_.jpg"
+  },
+  {
+    "asin": "B0BP72XJDJ",
+    "title": "Outvita 7 Ft Wooden Garden Arbor Arch, Fir Wood Arbour Archway, Decorative Stand Trellis for Wedding Ceremony Decoration Plant Climbing Rose Vines Lawn Courtyard Dark Brown",
+    "url": "https://www.amazon.com/dp/B0BP72XJDJ?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Outvita",
+    "features": [
+      "\u3010STRONG QUALITY\u3011This garden arch is made from FSC-Certified wood with carefully sanded, which has a smooth surface to prevent any unwanted injury caused by wood splinters. Natural solid wood material is weatherproof, durable and strong enough to hold various plants, and does not corrode as easily as normal wood",
+      "\u3010ADD NATURAL CHARM\u3011Wood colors and textures will bring a more natural atmosphere and complement your garden. The graceful garden trellis creats a beautiful entrance to your garden and add a touch of natural charm to your any outdoor space. There's nothing better than this pastoral decoration",
+      "\u3010PLANT CLIMBING SUPPORT\u3011The wooden plant trellis is connected and fixed by screws and metal plates to provide plenty of support for various plants, which is an environmental structure for the growth of the various climbing plants, vines and vegetables. Many rhombus cut-out on the side panels are used to hang green leaves and flowers",
+      "\u3010GREAT FOR EVENTS\u3011The wedding arch arbor provides an archway for climbing plants and are a graceful entrance to your garden, patio or walkway, perfectly decorating your garden and yard. This walkway trellis is also great for weddings, anniversaries, birthday party, Christmas or other important occasions decoration",
+      "\u3010EASY INSTALLATION\u3011Comes with high-quality hardware and other accessoried required for installation with the arch. We also provide detailed installation instructions to help you have a hassle-free installation within ease. OVERALL DIMENSIONS: (59.8 x 23.6 x 84.6)\" (L x W x H)"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41uueRZY1vL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41uueRZY1vL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41uueRZY1vL._SL75_.jpg"
+  },
+  {
+    "asin": "B0CNR2RPT3",
+    "title": "OUTOUR Versatile Oversized 9FT Iron Garden Gazebo Arbor Arbour Heavy Duty Metal ArchTrellis Support for Plants Climbing Garden Outdoor Yard Patio Wedding Party Ceremony Decor Arch",
+    "url": "https://www.amazon.com/dp/B0CNR2RPT3?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "OUTOUR",
+    "features": [
+      "Practicable and Stylish: The open design allows for abundant sunlight and optimal air circulation, promoting a healthy environment for plant growth. This thoughtful design of the metal gazebo ensures the garden remains vibrant and lush.",
+      "Versatile Garden Enhancement: This garden iron gazebo serves as a sturdy support structure for climbing plants and flowers, transforming your outdoor space into a breathtaking living archway or a charming sitting area, blending beauty and functionality seamlessly.",
+      "Durable Iron Material: This iron gazebo, designed for garden and outdoor use, guarantees stability and longevity. Crafted with durable metal, the gazebo features an elegant design, including a domed top and intricate scrollwork, providing both functional support and decorative allure.",
+      "Easy Assembly\uff1aOur garden iron gazebo not only boasts excellent quality but also comes with detailed assembly instructions, ensuring you can effortlessly complete the assembly process without any hassle.",
+      "Dimension\uff1a83\u2018\u2019W x 110''H"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/411Qo7+eHfL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/411Qo7+eHfL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/411Qo7+eHfL._SL75_.jpg"
+  },
+  {
+    "asin": "B0CQXCS4T1",
+    "title": "SHANTRA 79'' L x 59'' W x 79'' H Grape Vine Support Arch Arbor, Garden Arch Trellis, Plant Climbing Pergola, Arbour Gazebo Trellis for Backyard Decoration, White Rack for Vineyard",
+    "url": "https://www.amazon.com/dp/B0CQXCS4T1?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "SHANTRA",
+    "features": [
+      "Suitable Size -- Our grape vine support arch arbor is 79'' L x 59'' W x 79'' H, whose size is suitable for most gardens, it can save every inch of space in your garden. You can easily decorate or grow plants on it and enjoy with your family.",
+      "Stable Structure -- Unlike metal iron clips, Our grape trellis uses traditional screws to hold them in place for stability while maintaining good-looking appearance. This garden arch trellis has a durable triangular support design that keeps the structure stable and sturdy enough to support plants with ease.",
+      "Premium Material -- The garden trellis is made of excellent materials, and sturdy built-in steel with plastic coating. The durable frame is weatherproof, providing strong support for your climbing plants and keeping a good condition even in long time damp and humid conditions.",
+      "Decorative and Functional -- The open design of the grape arch trellis provides an attractive archway for climbing plants to create a beautiful entry into your garden. It is a perfect romantic and durable access to garden. And black rack can be matched with a variety of garden styles.",
+      "Versatile Plant Trellis -- Our plant arch trellis adds vertical space for veining plants in your garden, keeping your plants off the ground and reducing rot and disease. This elevated position also increases the amount of time your plants are exposed to air and light. Perfect height to harvest vegetables and fruits. Ideal for planting grapes, cucumbers, peas, zucchini,flowers and other climbing plants."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/511QHCB0UQL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/511QHCB0UQL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/511QHCB0UQL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
