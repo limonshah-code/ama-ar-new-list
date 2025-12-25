@@ -1,0 +1,334 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2025-12-26T05:18:35Z
+author: "Mason Everett"
+title: "Best Products"
+excerpt: "Discover the products to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dky6urpy2/image/upload/v1766639891/blog_image_1766639891_nodihc.webp
+category: "Reviews"
+tags:
+  - products
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-products
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right products
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Products" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best Products"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Products"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy products?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose products?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best products for beginners?"
+- "How much should I spend on products?"
+- "What features are most important in products?"
+- "How do I maintain my products?"
+- "Are expensive products worth it?"
+- "What brands make the best products?"
+- "How long do products typically last?"
+- "Can I find good products on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with product URL (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B07XXPHQZK",
+    "title": "LANEIGE Lip Sleeping Mask, Berry: Nourishing Overnight Lip Treatment with Vitamin C, Shea & Murumuru Butter for Hydrating Dry, Flaky Lips",
+    "url": "https://www.amazon.com/dp/B07XXPHQZK?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "LANEIGE",
+    "features": [
+      "A leave-on lip mask that delivers intense moisture and antioxidants while you sleep with Berry Fruit Complex, Murumuru seed and Shea butter.",
+      "Highlighted Ingredients: Berry Mix Complex: Rich in antioxidants to help reveal smooth and supple looking lips.Coconut Oil, Shea Butter, and Murumuru Seed Butter: Help nourish & deliver lasting moisture while you sleep. Vitamin C: Helps protect from external aggressors.",
+      "Skin Type: Normal, Dry, Combination, and Oily",
+      "Skincare Concerns: Fine Lines/Wrinkles, Dryness, and Dullness"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31BCZM2iffL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31BCZM2iffL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31BCZM2iffL._SL75_.jpg"
+  },
+  {
+    "asin": "B0CTK5ZTNK",
+    "title": "Under Eye Patches, 40 Pairs Eye Mask for Dark Circles, Puffy Eyes, Undereye Bags,Wrinkles,Eye Mask Patches with 24K Gold, Hyaluronic Acid,Rose & Aloe Vera, Eye Treatment Skin Care for Men & Women Gift",
+    "url": "https://www.amazon.com/dp/B0CTK5ZTNK?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "USTELIR",
+    "features": [
+      "\u3010Highly Efficienty Skin Care \u3011: USTELIR 40 pairs eye patches included 24k Gold eye mask (10 pairs), Rose eye patches(10 pairs), Aloe Vera eye patch(10 pairs), Hyaluronic Acid eye masks(10 pairs). 24k Gold eye mask helps to smooth the skin, reduce dark circles under the eyes. Rose eye patches help prevent aging and brightening. Aloe vera eye patch helps to gently moisturize the skin. Hyaluronic acid eye masks help to lighten wrinkles. Say goodbye to under eye fatigue, giving you a youthful, refreshed look.",
+      "\u3010Natural Ingredients\u3011: Our under eye patches for eyes use with natural ingredients, the 4 different types eye mask main ingredients including Aqua, Glycerin, Collagen, Niacinamide, 24K Gold, Hyaluronic Acid, Rose Extract and Aloe Vera extract, help deeply repair the eye skin, help soothe the skin around the eyes, tighten your eye skin, remains hydrated and vibrant. The under eye patches through clinically tested by our researcher, continuous use can effectively reduces the appearance of dark circles and puffiness.",
+      "\u3010Individually Packaged\u3011: Each under eye patches for dark circles sheet is individually packaged. Therefore, don't worry about ensure they will be contaminate and losing the effectiveness once opening the package. Use during your daily skincare routine or as a quick pick-me-up before a special event. The travel-friendly packetsensure a hygienic and effortless under eye mask application each and every time. For younger eyes whenever you are, at home or on-the-go!",
+      "\u3010Effortless Application\u3011: The portable eye patch can refresh and rejuvenate your under-eye area with ease. Simply place our eye patches under your eyes after cleansing with warm water, press gently to secure, and hold for 15-20 minutes. Remove the eye mask and pat any remaining essence until fully absorbed. For optimal results, store in the fridge and use Once a day or at least once a week. Our patches are always on-hand to provide your skin with the care it deserves.",
+      "\u3010Fit for All Skin Types & Occasions\u3011: Our eye patches are perfect for men and women with any skin type including dry, oily, and neutral skin. They are also great for travel,wedding and party as a gift for women, such as face masks skincare,bachelorette party favors, personal care, self care, bridesmaid proposa,spa gifts, bulk gifts, beauty products for women etc. Experience brighter, smoother, and more youthful-looking skin today!"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51kIAKZFUUL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51kIAKZFUUL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51kIAKZFUUL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FGXG294L",
+    "title": "MAREE Hair Oil for Frizzy Hair with Argan Oil, Keratin & Biotin \u2013 Hair Serum for Dry and Curly Hair Gloss \u2013 Frizz Control Hair Care Products for Women \u2013 Aceite Para el Cabello \u2013 Keratin Hair Treatment",
+    "url": "https://www.amazon.com/dp/B0FGXG294L?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "MAREE",
+    "features": [
+      "Hydrating Hair Oil for Dry Hair \u2014 This anti frizz hair serum enriched with argan oil for hair adds silky softness and shine. A must-have hair product for women that helps hydrate and smooth strands for everyday softness and manageability.",
+      "Hair Serum for Damaged Hair \u2014 Our biotin oil for hair helps hair feel stronger and more resilient while maintaining a healthy-looking glow. This hair moisturizer for dry hair product provides moisture and smoothness for hair care for women.",
+      "Restoring Hair Serum for Dry Hair \u2014 Infused with aceite de argan and vitamins, this lightweight anti frizz hair product offers deep hydration and protection for easy styling. An ideal heat protectant serum that keeps hair sleek and easy to style.",
+      "Hair Care Formula for Dry, Dull Hair \u2014 This multitasking hair oil for damaged hair enhances softness and shine for all textures. A curly hair oil and split ends care serum that helps hair look smoother and healthier with regular use.",
+      "Premium Serum Hair Care \u2014 At MAREE, our haircare combines innovation and quality ingredients. This tratamiento para el cabello and bonding care formula helps maintain smoothness, hydration, and a polished look in every drop."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41m-uXvF4AL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41m-uXvF4AL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41m-uXvF4AL._SL75_.jpg"
+  },
+  {
+    "asin": "B0B2RM68G2",
+    "title": "BIODANCE Bio-Collagen Real Deep Mask, Hydrating Overnight Hydrogel Mask, Pore Minimizing, Elasticity, Plumping Improvement, Korean Skincare, Stocking Stuffers for Teen Girls | 1.19oz(34g) x 4ea",
+    "url": "https://www.amazon.com/dp/B0B2RM68G2?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "BIODANCE",
+    "features": [
+      "DEEP HYDRATION: The oligo-hyaluronic acid in the Biodance Bio-Collagen Real Deep Mask provides superior moisturizing effects compared to regular hyaluronic acid. It quickly hydrates the skin's surface and penetrates deeper layers, leaving the complexion healthy and well-moisturized.",
+      "PORE MINIMIZING & FIRMING: Ultra-low molecular collagen maximizes absorption and skin penetration. It helps refine enlarged pores, enhances skin elasticity immediately after application, and visibly reduces the appearance of fine lines and wrinkles.",
+      "BRIGHTENS THE SKIN: Formulated with Galactomyces Ferment Filtrate and Niacinamide, it improves uneven skin tone and texture while offering antioxidant effects, resulting in healthier, more radiant skin.",
+      "ESSENCE SOLIDIFIED: Each 1.19 oz bottle of essence is solidified into each mask sheet.",
+      "BECOMES TRANSPARENT: The mask turns transparent after 3 hours or overnight using, delivering active ingredients deep into the skin. So it is suitable for morning shed.",
+      "SAFE FOR SENSITIVE SKIN: All Biodance products are formulated with non-toxic, non-irritant ingredients. They are free from common allergens and 19 other harmful or controversial substances, making them completely safe for sensitive skin.",
+      "EFFECTIVE & LONG-LASTING RESULTS: Biodance skincare products are designed to balance potent ingredients with long-lasting results that go beyond temporary effects.",
+      "Gifts for Her \u2013 Surprise her with the global #1 best-selling collagen mask on Amazon. The Biodance Bio-Collagen Real Deep Mask delivers instant hydration, leaving skin radiant and refreshed\u2014just in time for your special night. Skincare essential is the perfect addition to any gift box."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41sBJRZDggL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41sBJRZDggL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41sBJRZDggL._SL75_.jpg"
+  },
+  {
+    "asin": "B00T0C9XRK",
+    "title": "essence | Lash Princess False Lash Effect Mascara | Volumizing & Lengthening | Cruelty Free & Paraben Free",
+    "url": "https://www.amazon.com/dp/B00T0C9XRK?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "essence",
+    "features": [
+      "If you receive this mascara UNWRAPPED, it did not come from essence cosmetics.",
+      "NO FALSIES NEEDED! Lash Princess False Lash Mascara defines and separates lashes while achieving a bold look.",
+      "DRAMATIC VOLUME: the conic shape fiber brush delivers dramatic volume and sculpted length WITHOUT clumps or globs.",
+      "CLAIMS: Cruelty Free. Free from gluten, silicones, parabens, oil, fragrance, alcohol, & microplastic particles. Made in Luxembourg.",
+      "CRUELTY FREE: essence cosmetics is certified and acknowledged by PETA as a cruelty-free brand. We do not test any of our products on animals."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41IP2ZEXFNL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41IP2ZEXFNL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41IP2ZEXFNL._SL75_.jpg"
+  },
+  {
+    "asin": "B0BRMYHMS5",
+    "title": "medicube Wrapping Mask Collagen Overnight Peel Off Facial Mask | Elasticity & Hydration Care, Reduces Sagging & Dullness | Hydrolyzed Collagen For Glowing Skin | Korean Skin Care, 2.53 fl.oz",
+    "url": "https://www.amazon.com/dp/B0BRMYHMS5?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "medicube",
+    "features": [
+      "Awaken Your Glow with Overnight Elasticity Booster - Protect and enhance your skin's elasticity with our collagen wrapping film, delivering 8 hours of intensive care while you sleep. Perfect for waking up with firmer, more resilient skin.",
+      "Comes Off in One Piece -Just like there's no better feeling than a clean shed, this easy-to-peel mask leaves your face feeling fresh and clean.",
+      "To avoid confusion, the tube is filled to 80% capacity for safety and secure transport, while the product itself \"contains the standard 2.53 fl. oz.\"",
+      "Powerful Ingredients: Ceramide NP for skin barrier and hydration, Collagen Extract for elasticity and youthful complexion, and Adenosine for reducing fine lines through skin renewal",
+      "Proven Results - Clinical trials show significant improvements with Medicube Collagen Night Wrapping Mask: +31.4% skin elasticity, +24.8% 24-hour moisture retention, and +23.4% skin surface hydration after 2 weeks of use. Individual results may vary."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31fPUs-jAmL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31fPUs-jAmL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31fPUs-jAmL._SL75_.jpg"
+  },
+  {
+    "asin": "B08KT2Z93D",
+    "title": "eos Shea Better Body Lotion Vanilla Cashmere, 24-Hour Moisture Skin Care, Lightweight & Non-Greasy, Natural Shea, Vegan, Vanilla Body Lotion, 16 fl oz",
+    "url": "https://www.amazon.com/dp/B08KT2Z93D?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "eos",
+    "features": [
+      "eos VANILLA CASHMERE BODY LOTION: Liberally apply eos lotion to just-cleaned skin - we'll do the rest. Pro tip: Layer this with your favorite fragrance for an enhanced experience",
+      "SUSTAINABLE SKIN CARE: Protect and moisturize with eos Shea Butter Body Lotion that includes 7 nourishing oils + butters, like natural shea butter and shea oil. Enjoy delightful fragrances that last all day on skin",
+      "24 HOUR MOISTURIZING BODY LOTION: Soothe and protect your skin with our lightweight, non-greasy hydrating body lotion. No sticky residue or heaviness, just all-day hydration and smooth skin",
+      "ALL-NATURAL SHEA BUTTER: eos body lotion uses 100% natural shea butter for a hydrating body lotion that makes skin soft. eos products are paraben, phthalate, and gluten free. Dermatologist-recommended. Vegan. Hypoallergenic. Cruelty-free",
+      "VANILLA CASHMERE: Our sweet and nuzzly Vanilla Cashmere scented body lotion contains fragrance notes of whipped vanilla, soft musk, and cozy caramel"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31+ACcHk+yL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31+ACcHk+yL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31+ACcHk+yL._SL75_.jpg"
+  },
+  {
+    "asin": "B091MBD3Q3",
+    "title": "GuruNanda Tongue Scraper for Adults (2 Pack) with Travel Case, 420 Medical-Grade 100% Stainless Steel Tongue Cleaner, Aids in Fresh Breath & Oral Care",
+    "url": "https://www.amazon.com/dp/B091MBD3Q3?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "GuruNanda",
+    "features": [
+      "HELPS PREVENT BAD BREATH: Scraping your tongue twice a day is the best way to prevent bad breath. The GuruNanda Metal Tongue Scraper removes layers of gunk, promoting fresh breath & a confident smile",
+      "100% STAINLESS STEEL TONGUE SCRAPER FOR ORAL HYGIENE: Our 420 surgical medical grade steel tongue scraper for adults is rust-proof & stain-resistant, cleans plaque gently for improved sense of taste",
+      "ERGONOMIC DESIGN FOR SMOOTH CLEANSING: GuruNanda tongue scraper, with its Spoon-shaped anti-gagging design and wide head, offers the perfect grip handle for comfortable back-and-front motion cleaning",
+      "TRAVEL-FRIENDLY AND EASY TO CLEAN: Fits in a pocket and comes with an included travel case for portability. It can be cleaned hassle-free. It is reusable and durable, unlike cheap plastic alternatives",
+      "UPGRADE TO GURU ORAL CARE REGIME: Add this simple step of tongue scraping to your daily routine. Add our range of GuruNanda Oil Pulling & Butter on Gums toothbrushes, to enjoy improved oral health."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51MdjT2Gu4L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51MdjT2Gu4L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51MdjT2Gu4L._SL75_.jpg"
+  },
+  {
+    "asin": "B09NXS395V",
+    "title": "NAZANO 24K Gold Under Eye Patches - 60 Pack for Puffy Eyes, Dark Circles, Bags & Wrinkles with Collagen & Hyaluronic Acid - Eye Care Pads for Daily Skincare (Gold)",
+    "url": "https://www.amazon.com/dp/B09NXS395V?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "NAZANO",
+    "features": [
+      "[Skin-Friendly Eye Patches]: Formulated to deliver a luxurious and revitalizing experience, these under-eye patches cater to the delicate skin around your eyes. The nourishing blend helps to soften and smooth the skin, leaving it feeling refreshed",
+      "[Hydrating & Moisturizing]: Infused with Hyaluronic Acid and Hydrolyzed Collagen, these under-eye patches help to hydrate and replenish the skin, promoting a more refreshed and rejuvenated appearance. Experience long-lasting moisture from the first application",
+      "[Soft & Skin-Compatible Blend]: Made with a mix of ingredients that support skin health, these under-eye patches offer a soothing touch for dry skin types. The formula is designed to be mild, providing a gentle experience",
+      "[Easy To Use]: To use, simply clean your face and eyes with warm water, then apply the eye pads under your eyes and press gently to secure. Leave them on for 20 minutes, then remove and gently pat any remaining essence into your skin. Use as part of your regular skincare routine for optimal results",
+      "[Perfect For Both Men & Women]: Crafted for all, these patches offer a calming touch for the under-eye area. Ideal for moments when you need a little extra care, they help promote a refreshed look"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41nxtPNrniL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41nxtPNrniL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41nxtPNrniL._SL75_.jpg"
+  },
+  {
+    "asin": "B0C8LYLYPK",
+    "title": "Rosemary & Castor Hair Growth Oil",
+    "url": "https://www.amazon.com/dp/B0C8LYLYPK?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Artnaturals",
+    "features": [
+      "Promotes hair growth: Rosemary and castor oil in ArtNaturals Rosemary Castor Hair Oil stimulate hair follicles, promoting healthy hair growth and reducing hair loss.",
+      "Strengthens and nourishes: The blend of oils provides essential nutrients and vitamins to the hair, strengthening the strands and nourishing the scalp for healthier and more resilient hair.",
+      "Moisturizes and conditions: The hair oil deeply moisturizes and conditions the hair, leaving it soft, smooth, and manageable.",
+      "Helps with scalp health: Rosemary and castor oil have properties that can help improve scalp health by reducing dandruff and itchiness.",
+      "Enhances shine and texture: Regular use of this hair oil can enhance the natural shine and improve the overall texture of the hair, making it look more vibrant and revitalized."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51nENP6riOL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51nENP6riOL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51nENP6riOL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
