@@ -1,0 +1,332 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2026-01-04T21:12:57Z
+author: "Mason Everett"
+title: "Best Reading Lamps"
+excerpt: "Discover the reading lamps to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dky6urpy2/image/upload/v1767474750/blog_image_1767474750_wgpdfx.webp
+category: "Reviews"
+tags:
+  - reading lamps
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-reading-lamps
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right reading lamps
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Reading Lamps" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best Reading Lamps"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Reading Lamps"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy reading lamps?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose reading lamps?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best reading lamps for beginners?"
+- "How much should I spend on reading lamps?"
+- "What features are most important in reading lamps?"
+- "How do I maintain my reading lamps?"
+- "Are expensive reading lamps worth it?"
+- "What brands make the best reading lamps?"
+- "How long do reading lamps typically last?"
+- "Can I find good reading lamps on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with product URL (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B08BY9124H",
+    "title": "Wio-Mio Floor lamp, 15w/1000lm Bright LED Floor Lamp with Stepless Adjustable 3000K-6000K Colors and Dimmer, Remote and Touch Control, Adjustable Floor Lamp for Living Room",
+    "url": "https://www.amazon.com/dp/B08BY9124H?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Wio-Mio",
+    "features": [
+      "Remote control; You can stepless adjust the brightness and color temperature through the remote control within a range of 49.2 feet, the lighting mode can be customized according to different needs of the environment. In order to facilitate selection, there are 6 scenes on the remote control that can be adjusted by one click to the corresponding mode",
+      "Touch control; You can stepless adjust the brightness from 5% to 100%, and there are 4 color temperatures that can be adjusted 3000k, 4000k, 5000k, 6000k",
+      "Lamp resource; Using 112 LED lamp beads can emit 1200 lumens and only consume 12 Watt of power; It has soft natural light without flicker",
+      "Flexible gooseneck; 360-degree adjustable gooseneck can direct the light to the position you need. The gooseneck can be easy bent and maintain its position after bending",
+      "We will consistently be committed to providing our customers with high quality products, if there have any other issues, please contact us, our customer support team is ready to help"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31OiulQeT0L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31OiulQeT0L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31OiulQeT0L._SL75_.jpg"
+  },
+  {
+    "asin": "B0C3BC4QG2",
+    "title": "Gritin 19 LED Rechargeable Book Light for Reading in Bed with Memory Function- Eye Caring 3 Color Temperatures,Stepless Dimming Brightness,80 Hrs Runtime Lightweight Clip on Light for Book Lovers",
+    "url": "https://www.amazon.com/dp/B0C3BC4QG2?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Gritin",
+    "features": [
+      "Horizontal Head Book Light: The reading light adopts a horizontal head design with a wider irradiation range.19 LED lamp beads are arranged in a straight line and the ABS material lampshade provides stable and sufficient lighting without disturbing others",
+      "3 Colors and Stepless Dimming: Amber light (1800K), Mixed light (3400K) and White light (6000K). Short press the color temperature button to easily switch color modes; Long press the brightness adjustment button to adjust the brightness from 10% to 100%",
+      "Soft light for Eye Protection: With professional eye protection LED lamp beads, it emit light without flickering, shadow and glare. The natural and soft light will not tire your eyes even after prolonged use, and allow you to fully enjoy your reading time",
+      "Rechargeable & Long-Lasting: Built-in 1200 mAh high-capacity battery, the reading light can provide you with 8-80 hours of long-lasting illumination. It only takes two hours to fully charge, and 4 LED indicators can show the real-time power level",
+      "360\u00b0 Flexible & Portable Neck: The 360\u00b0 bendable gooseneck can be rotated to any angle and folded at will for easy storage and portability. Clips with non-slip pads holds it securely on e-readers, books, shelves and anywhere else without fear of slipping."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41Vqo--3yGL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41Vqo--3yGL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41Vqo--3yGL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DP7C3XK9",
+    "title": "PACOVY Floor Lamp, Adjustable Height Floor Lamps for Living Room Bedroom, 120 LED Super Bright Standing Lamp Remote & Touch Control Dimmable Gooseneck Tall Stand Reading Lamp for Office Craft, Black",
+    "url": "https://www.amazon.com/dp/B0DP7C3XK9?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "PACOVY",
+    "features": [
+      "120LED High Brightness: Equipped with 120 high-brightness LED beads, the PACOVY floor lamp delivers a powerful 18W 1800LM light output, providing ample light coverage over a wide area. The led floor lamp effectively illuminates the entire workspace, making activities like work, reading, crafts, sewing, and puzzles easy and enjoyable. The light is bright and flicker-free, gentle on the eyes, and will not cause eye strain even with extended use",
+      "Flexible Height and Angle Adjustment: The extendable lamp pole allows you to easily adjust the overall height, while the 360\u00b0 flexible gooseneck design enables the lamp head to rotate to any angle and position, precisely illuminating the work area to meet the lighting needs of various detailed tasks",
+      "Adjustable Brightness and Color Temperature: The floor lamps for living room bedroom supports 10%-100% stepless dimming, offering a range of lighting from soft to bright. The color temperature can be adjusted between 2700K warm white to 6500K cool white, easily creating different atmospheres. The standing lamp features 5 preset modes (Work, Reading, Leisure, Care, Night Light), with one-touch adjustment to meet various scene requirements, providing an ideal lighting experience",
+      "Remote and Smart Features: Equipped with a fully functional remote control with a range of up to 50 feet/15.24 meters, allowing easy adjustment of light settings. The magnetic remote can be attached to the metal lamp pole for convenient access and to prevent loss. You can also easily adjust commonly used settings via touch control. The timer function allows automatic turn-off without having to get up, and the memory function automatically restores the last used light settings",
+      "Sturdy and Easy to Install: The heavy-duty solid metal base is equipped with anti-slip pads to ensure the lamp remains stable and resistant to tipping. The lamp pole uses metal thread connections, providing a tight and sturdy structure that prevents loosening or breakage. The stand up lamp has a lifespan of up to 50,000 hours, durable and long-lasting. The simple design requires no tools and can be easily assembled in 2 minutes, saving you time."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41qdi-5zLNL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41qdi-5zLNL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41qdi-5zLNL._SL75_.jpg"
+  },
+  {
+    "asin": "B086ZLGLV3",
+    "title": "ROTTOGOON Floor Lamp for Living Room with 3 Color Temperatures LED Bulb, Standing Lamp Tall Industrial Floor Lamp Reading for Bedroom, Office (9W LED Bulb, Beige Lampshade Included) -Black",
+    "url": "https://www.amazon.com/dp/B086ZLGLV3?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "ROTTOGOON",
+    "features": [
+      "ONLY 1 Beige Lamp Shade Included: please noted that this version comes only one piece beige lampshade. Please check carefully before you place order.",
+      "Eye-protect soft light: this standing lamp gives off warm, soft 3000K warm white lighting creates a comfortable ambiance for instant relaxation.",
+      "Long lasting & energy saving: includes a power-saving light bulb. Not burn out or overheat, purchase this lamp is also meant saving money and energy.",
+      "Convenient pedal switch: easy to turn on/off. Spare your hands to do something else, saves you from bending down to turn off the light.",
+      "Simple classic design: fits perfectly in anywhere in your home."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/416VJ0TYmiL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/416VJ0TYmiL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/416VJ0TYmiL._SL75_.jpg"
+  },
+  {
+    "asin": "B07WNRN9WQ",
+    "title": "Glocusent Book Light, 3-Color & 6-Brightness Reading Light, Bendable Neck Light, 80-hr Lasting Rechargeable Book Light, Perfect Reading Lights for Books in Bed, Knitting, Repairing, Book Lovers Gifts",
+    "url": "https://www.amazon.com/dp/B07WNRN9WQ?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Glocusent",
+    "features": [
+      "[3 Colors & 6 Brightness Adjustable] This Glocusent reading light owns 3 useful color temperature modes: yellow(3000K), warm white(4000K) and cool white(6000K). Each neck light head owns an independent switch for 3 brightness levels dimmable. The perfect reading light for bed and neck light for crocheting, knitting, camping, or repairing etc.",
+      "[Rechargeable & Long-Lasting] This bed reading light rechargeable with USB Type-C which is reversible and therefore easier to plug in compared with other neck lights for crafts charged with Micro-USB. Up to 80 hours (general reading, single head) of powerful, non-diminishing brightness from the included premium rechargeable 1000mAh battery. A long lasting usb rechargeable book light for reading in bed.",
+      "[Ergonomic & Hands-Free Design] The arms of the booklight around your neck are supple and adjustable so you can get the angle most comfortable for you. This around the neck reading light is ergonomically designed, it is an exceptional handsfree neck light for reading!",
+      "[Partner Friendly & Versatile] Unlike other book lights for reading at night, the Glocusent neck book light has a special narrow beam angle (90\u00b0) design. It is bright enough to illuminate the area you focus on while being dim enough not to disturb your sleeping partner. Additionally, the hands-free feature allows you to engage in various delicate activities such as knitting, walking, repairing, and more. Make it a perfect versatile needlepoint light.",
+      "[Excellent Service & Superior Guarantee] Glocusent products undergo rigorous quality control processes to ensure product quality. Our Customer Experience Team is available at your fingertips 24/7 for anything you need! We promise: 1. 60-day return service and a 24-month warranty. 2. Original patented design. 3. FCC, CE, RoHS, PSE & C-TICK certified. 4. Contains Glocusent Original LED Neck Reading Light, Charging Cable, User Manual, Bookmark (No adapter)."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41-CC8j0OjL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41-CC8j0OjL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41-CC8j0OjL._SL75_.jpg"
+  },
+  {
+    "asin": "B0BKT611XR",
+    "title": "LEPOWER Desk Lamp, 800LM LED for Home Office, 12W Reading for Desk, Eye-Caring Light, Touch Table Gooseneck Lamp, 50 Lighting Modes, Bright for Bedroom, Study (Black)",
+    "url": "https://www.amazon.com/dp/B0BKT611XR?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "LEPOWER",
+    "features": [
+      "RG0 Certified Eye-Caring Desk Lamps: LEPOWER LED desk light is designed with RG0 lamp beads and professional optical lenses, which 100% prevent hazardous blue light. Our desk lighting has reached the RG0 level in IEC 62778, effectively protecting your eyes from fatigue and preventing vision loss",
+      "Upgraded Lamp Panel: LEPOWER office desk lamp has a 200% wider panel, and its lighting area is up to 50\u201d. This 12 W LED table light casts 800 LM soft bright light, which is 100% brighter while giving off 1400 lux",
+      "50 Lighting Choices: 5 color temperatures x 10 brightness levels, easily adjust the desk lights to suit your mood or surroundings. Dimmable Led lamp desk is suitable for working, studying, reading, drawing, sewing, nail, puzzle, craft, etc",
+      "Flexible Gooseneck Design: LEPOWER gooseneck desk lamps feature an enduring metal gooseneck. This 360\u00b0 adjustable gooseneck can help to project the light to any position needed",
+      "Touch Control & Smart Memory: Easily adjust the Light settings not only with the traditional +/- buttons but also with the stepless slide-control bar. With Smart Memory Function, the office desk lamp will remain its last settings when turned back on so you don\u2019t have to adjust it all over again"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31-NplFJYPL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31-NplFJYPL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31-NplFJYPL._SL75_.jpg"
+  },
+  {
+    "asin": "B0BBMK7RCF",
+    "title": "iZELL Desk Lamp, [3 Color Modes & 10 Brightness] LED Reading Light with Clamp, Silicone Flexible Arm Book Light for Kids Reading Book in Bed at Night Clip on Table, Headboard, Dorm - 15.8\u2018\u2019 Black",
+    "url": "https://www.amazon.com/dp/B0BBMK7RCF?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "iZELL",
+    "features": [
+      "\u3010ENERGY SAVING EYE CARE LAMP\u3011- This led book light consumes 80% less energy compared to incandescent lamps. Consists of a long strip shape, stable light source and soft panel housing for a softer light and a wider coverage, which allows you to stay focused and productive while using it. It can be widely used for reading in bed at night, college dorm room, zoom meeting, painting, sewing, nail art, tattoo, makeup, crafts, etc.",
+      "\u30103 LIGHTING MODES & 10 BRIGHTNESS LEVELS\u3011- This dimmable reading light with 23 LED beads offers 3 color modes: warm (3000K), warm and cool (4500K) and cool (6000K). Each lighting mode has 10 brightness dimming levels. Different color temperature and intensity can meet the needs of different scenes.",
+      "\u3010FLEXIBLE ARM & STURDY CLIP\u3011- This black desk lights for home office has a 15.8-inch length of 360\u00b0 flexible arm, allowing you to easily adjust the direction of light, as well as the height and distance. The sturdy clamp can opens up to 2.3-inch, which is very easy to clip on anywhere you want, not only for tables, bed and headboards.",
+      "\u3010USB POWER MORE PORTABLE\u3011- This modern reading light features a 49-inch USB cable and 5V/2A adapter, so you don't need to buy additional adapters. The USB interface is suitable for laptops, desktops, computers, USB docks, mobile power, USB adapters, and many other power supply options. It is very portable and perfect for camping. A great gift for kids.",
+      "\u3010WHAT YOU'LL GET\u3011: 1x Reading Lamp with Clamp, 1x USB Power Adapter (5V/2A), 1x User Manual, 1x 24-months-warranty."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41kabBTJ2SL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41kabBTJ2SL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41kabBTJ2SL._SL75_.jpg"
+  },
+  {
+    "asin": "B00VJ4SHZG",
+    "title": "Brightech Litespan - Bright LED Floor Reading Lamp for Over Chair Crafts and Reading, Esthetician Light for Lash Extensions, Gooseneck Adjustable Standing Lamp for Living Room, Bedroom, Office - Black",
+    "url": "https://www.amazon.com/dp/B00VJ4SHZG?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Brightech",
+    "features": [
+      "Energy-saving LED Floor Lamp: This LED standing lamp has a service life of 20,000+ hours, with built-in high brightness and high contrast LEDs that provide fine color contrast for close work. Designed to reduce eye strain during detailed tasks, the lamp shines 850\u2013950 lumens, draws only 12W of electricity, and saves up to 80% compared with traditional incandescent lamps, making it efficient for everyday home lighting or professional use.",
+      "Modern Living Room Decor With Adjustable Gooseneck: Unlike traditional floor lamps, this is an excellent floor reading lamp with a flexible and durable neck that allows you to rotate and bend the light into various angles. You can twist the head of the standing lamp to direct light exactly onto your subject, supporting tasks that benefit from precise brightness control and easy remote/touch convenience at the switch. Its slim footprint allows for easy placement beside chairs, desks, or in corners without crowding your space.",
+      "Natural Daylight Lamp For Detailed Tasks: See fine details very clearly and with high contrast and precision using the Litespan standing lamp\u2019s natural daylight color light. Ideal for lash, nail, and tattoo work, as well as sewing, crafts, and puzzles, this lamp provides comfortable illumination for extended sessions, where clarity and consistency matter.",
+      "Sturdy And Safe Tall Lamp: Designed with a weighted, high-stability base, the Brightech Litespan floor lamp helps prevent tipping, even around kids or pets. The LEDs remain cool to the touch after hours of use, reducing the risk of accidental burns or overheating. Comfortable for extended sessions and suitable for hours of continuous use, this lamp is designed for daily use and helps maintain a comfortable workspace temperature while delivering consistent, dependable operation in both home and professional environments.",
+      "The Warranty: Unlike other brands, our gooseneck floor lamps are built to last, and we stand behind that. That's why Brightech USA offers an industry-leading 3-year warranty covering defects, malfunctions, or sudden failures to your floor lamp when purchased through us. Our all-star US-based support team is standing by should you ever need support with this standing lamp."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31KBhFVFL-L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31KBhFVFL-L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31KBhFVFL-L._SL75_.jpg"
+  },
+  {
+    "asin": "B08GG42WXY",
+    "title": "Gritin 9 LED Rechargeable Book Light for Reading in Bed - Eye Caring 3 Color Temperatures,Stepless Dimming Brightness,80 Hrs Runtime Small Lightweight Clip On Book Reading Light for Studying",
+    "url": "https://www.amazon.com/dp/B08GG42WXY?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Gritin",
+    "features": [
+      "Stepless Dimming and 3 Color Modes: Adjust the brightness from 100% to 10% by long press button to suit different reading environment. Simple switch 3 color temperature lighting modes by clicking the button: mixed color, cool white, warm",
+      "Eye Protecting Reading Light: No flicker, no shadow, no dizzy light. Provide a natural and soft light which won\u2019t strain your eyes even after long hours of use. Enjoy your reading time without disturbing your partner or roommate",
+      "1000 mAh Battery: Built-in 1000 mAh battery only takes about 2.5 hours to get a full charge and support up to 80 hours lighting at lowest brightness. 4 LED indicator lights will always show the remaining power of the light",
+      "360\u00b0 Flexible Neck & Sturdy Clip: 360\u00b0 bendable goose neck can be rotated to any angle you want. Anti-skid clip design makes it firmly clamp on an e-reader, books, shelf, etc",
+      "Portable and Widely Use: Lightweight and sturdy book light can stand independently with the anti-slip pad on the bottom. Free your hands to enjoy bedtime reading, working, traveling, camping etc"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51XIT4tKtBL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51XIT4tKtBL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51XIT4tKtBL._SL75_.jpg"
+  },
+  {
+    "asin": "B08JSCB6L4",
+    "title": "O\u2019Bright Dimmable LED Pharmacy Floor Lamp, 12W LED, Full Range Dimming, 360 Degree Swing Arms, Adjustable Heights, Standing Lamp for Reading, Sewing, and Craft, ETL Listed, Antique Brass (Gold)",
+    "url": "https://www.amazon.com/dp/B08JSCB6L4?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "O'Bright",
+    "features": [
+      "ETL Listed - O\u2019Bright LED pharmacy floor lamp passes ETL Safety Standard Test and has ETL certification. ETL safety standard ensures you a safe product for daily use.",
+      "Super Bright LED / Energy Saver - The end-table floor lamp is built-in high efficient 12 Watts LEDs with approximately 50,000 hrs lifespan. You will never need to worry about replacing the light bulbs. The LEDs deliver Max.1050 Lumens of brightness (equal to 75W incandescent bulbs) which with ONLY 12 Watts power consumption, which saves you up to 80% of electricity bill, compared to halogen and incandescent lighting.",
+      "Dimmable / Memory Function - The LED reading lamp is built-in a smart dimmer switch with all range dimming and memory setting functions. Simply long press on the switch button to adjust the brightness and release the button when the light changes to your desired light level. You may dim the light to a soft setting for mood light or reading. Or, you can also change it to a high-level setting when you need a brighter light for craft works or sewing. The dimmer will always memorize your setting.",
+      "Ultra Flexible Design - Unlike most floor lamps have very limited uses, this LED floor lamp features the most flexibilities. The height of this standing lamp is adjustable. You can adjust the height, from 47\u201d to 55\u201d, to fit your different needs. Besides, its unique swivel head and 360\u00b0 swing arms allow you to easily move the light to any directions you want. Turn it upwards if you need indirect light, or tilt it down when you need a reading light.",
+      "100% Made to Last - This swing floor lamp is 100% made of metal! Its metal lamp shade provides high efficient heat radiation and helps extend LED lifespan. Besides, the weighted metal base and strong tubes will firmly hold the standing light. You can smoothly swing the arms to move the light with confidence! This sturdy metal floor lamp not only represents durability and safety for daily use but its sleek vintage design brings an elegant retro fashion to your home decoration!"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31jG3RxK7QL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31jG3RxK7QL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31jG3RxK7QL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
