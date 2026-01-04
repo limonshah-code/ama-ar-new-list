@@ -1,0 +1,336 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2026-01-05T14:05:26Z
+author: "Mason Everett"
+title: "Best Nourishing Beard Oils"
+excerpt: "Discover the nourishing beard oils to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dky6urpy2/image/upload/v1767535499/blog_image_1767535499_sllo7s.webp
+category: "Reviews"
+tags:
+  - nourishing beard oils
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-nourishing-beard-oils
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right nourishing beard oils
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Nourishing Beard Oils" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best Nourishing Beard Oils"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Nourishing Beard Oils"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy nourishing beard oils?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose nourishing beard oils?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best nourishing beard oils for beginners?"
+- "How much should I spend on nourishing beard oils?"
+- "What features are most important in nourishing beard oils?"
+- "How do I maintain my nourishing beard oils?"
+- "Are expensive nourishing beard oils worth it?"
+- "What brands make the best nourishing beard oils?"
+- "How long do nourishing beard oils typically last?"
+- "Can I find good nourishing beard oils on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with product URL (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B00M49SG0Q",
+    "title": "Honest Amish - Classic Beard Oil - 2 Ounce",
+    "url": "https://www.amazon.com/dp/B00M49SG0Q?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Honest Amish",
+    "features": [
+      "Hand Crafted in the USA",
+      "Organic Virgin Argan, Golden Jojoba and 6 More Premium Hydrating Oils",
+      "All Natural and Organic Ingredients",
+      "Softens Beard and Conditions Skin",
+      "The Most Trusted Brand for Beards in the World"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31WaDV+u5LL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31WaDV+u5LL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31WaDV+u5LL._SL75_.jpg"
+  },
+  {
+    "asin": "B07Q9C3HCC",
+    "title": "SheaMoisture Beard Conditioning Oil for a Full Beard Maracuja Oil and Shea Butter to Moisturize and Soften 3.2 oz",
+    "url": "https://www.amazon.com/dp/B07Q9C3HCC?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "SheaMoisture",
+    "features": [
+      "SheaMoisture Maracuja Oil & Shea Butter Beard Conditioning Oil is our best beard care to moisturize and soften your beard",
+      "Keep your beard in check with our conditioning oil. Our beard care combines Maracuja oil and shea butter to leave your beard looking, feeling and smelling great",
+      "This beard oil for men is made with Fair Trade shea butter",
+      "After using our Beard Wash and drying beard, apply a few drops to fingertips and massage into beard from root to ends. For thick, coarse hair, apply more conditioning oil to your beard care regimen",
+      "This beard oil is formulated with no parabens, no phthalates, no mineral oil or petrolatum"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31z7tl3-6XL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31z7tl3-6XL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31z7tl3-6XL._SL75_.jpg"
+  },
+  {
+    "asin": "B0C6FHPLHD",
+    "title": "Viking Revolution Beard Oil for Men - Natural Mens Beard Oil with Argan Oil and Jojoba Oil - Beard Softener,Strengthens and Moisturizes - Beard Conditioner for Men (Spiced Vanilla, 1 Pack)",
+    "url": "https://www.amazon.com/dp/B0C6FHPLHD?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Viking Revolution",
+    "features": [
+      "Be a Stunner - Spiced vanilla scent will leave you to revel in the fragrance of your beard for hours",
+      "Goodbye, Beardruff! - Soothe your itchy and irritated skin with a just a few drops a day",
+      "Natural Beard Care - A perfect blend of Argan & Jojoba strengthens facial hair & helps avoid thin patches",
+      "Tame Stubborn Facial Hair - Have a manageable, frizz-free beard that is soft & smooth to the touch",
+      "The Viking Promise - If for any reason, you're not completely satisfied, simply contact us and we'll take care of it"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51ok+wXfSoL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51ok+wXfSoL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51ok+wXfSoL._SL75_.jpg"
+  },
+  {
+    "asin": "B0029Z9OUG",
+    "title": "Every Man Jack Men's Beard Oil - Sandalwood Fragrance - Deeply Moisturizes and Softens Your Beard and Adds a Natural Shine - Naturally Derived with Shea Butter and Argan Oil - 1 fl oz",
+    "url": "https://www.amazon.com/dp/B0029Z9OUG?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Every Man Jack",
+    "features": [
+      "LOOK LIKE A LUMBERJACK. FEEL LIKE SILK: You don\u2019t have to suffer to look like a boss. Rub in our beard oil to soften your beard and nourish your skin and you\u2019ll be feeling as good as you look.",
+      "OUTDOOR INSPIRED SCENTS: A warm sandalwood scent complemented by amber, vetiver, and vanilla",
+      "NATURALLY DERIVED INGREDIENTS: Rub in our blend of Naturally Derived Vitamin E, Argan, and Borage to soften, nourish, and finish with a healthy shine.",
+      "TRUSTED BY MORE THAN 5 MILLION MEN: Born at the base of Mt. Tam, CA. Proudly made in the US and B Corp Certified. Loved by millions of men the world over.",
+      "THE DREAM TEAM: With daily beard wash, hydrating oil, moisturizing butter, and styling balm, our all-star squad will take your beard care routine to championship levels.",
+      "THE DREAM TEAM: With daily beard wash, hydrating oil, moisturizing butter, and styling balm, our all-star squad will take your beard care routine to championship levels."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41oa971WcWL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41oa971WcWL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41oa971WcWL._SL75_.jpg"
+  },
+  {
+    "asin": "B0D8WDQ1GD",
+    "title": "Jack Black Epic Moisture Ultimate MP10 Nourishing Oil, 2 Fl Oz \u2013 Multi-Purpose Moisturizing Body Oil and Beard Oil with 10 Natural Oils for Face, Beard, Body, Hair, Elbows, Feet and Cuticles",
+    "url": "https://www.amazon.com/dp/B0D8WDQ1GD?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Jack Black",
+    "features": [
+      "A blend of conditioning and natural oils for skin and hair provide moisture, antioxidants, essential nutrients, and fatty acids for a healthy-looking appearance",
+      "Organic Moringa Seed Oil is naturally high in antioxidant Vitamin E and rich in fatty acids; It has been shown to help smooth and hydrate skin",
+      "Antioxidant-rich Argan Oil, Organic Marula Seed, and Grape Seed oils helps reinforce skin's natural defenses",
+      "Argan Oil, Plum Seed, Olive Fruit, and Jojoba Oil smooth hair, improve shine, and reduce frizz",
+      "For facial and body skin: The lightweight formula helps soothe skin and relieve dryness and flakiness.",
+      "For hair: The versatile, nourishing treatment can be used as a leave-on conditioning, styling, or finishing oil for hair and facial hair.",
+      "For shaving: Provides exceptional moisturization and soothing benefits when used as a pre-shave preparation or as a stand-alone shaving oil."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31H6Fovxa8L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31H6Fovxa8L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31H6Fovxa8L._SL75_.jpg"
+  },
+  {
+    "asin": "B0F2F8KZ3F",
+    "title": "2 PACK Beard Growth Oil for Men, 100% Natural Beard Oil with Argan Oil, Jojoba Oil, Castor Oil - 6.76 FL/200ML Fresh Fragrance Beard Conditioner Softens, Nourishes,Strengthens, Promotes Beard Growth",
+    "url": "https://www.amazon.com/dp/B0F2F8KZ3F?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Beauntangly",
+    "features": [
+      "100% NATURAL INGREDIENTS\uff1aWe have carefully selected natural ingredients such as Argan Oil, Jojoba Oil, Vitamin E, Castor Oil, Grape Seed Oil, and Olive Oil to deeply nourish and moisturize your beard. Each ingredient is strictly chosen to ensure no chemical additives, offering you 100% natural care for your beard and skin, restoring its natural shine and health.",
+      "PROMOTES BEARD GROWTH: With the powerful combination of Castor Oil and Argan Oil, this nutrient-rich oil not only nourishes the beard but also provides nutrients to the beard roots, stimulating beard follicles, strengthening its foundation and promoting healthy growth. With continued use, your beard will become denser and thicker.",
+      "MOISTURIZING AND REPAIRING: The unique formula of this beard oil deeply nourishes both the beard roots and skin, alleviating dryness, frizz, breakage, shedding and split ends, maintaining skin hydration and health, leaving the beard softer, smoother, and easier to manage, reducing beard loss and improving beard growth quality.",
+      "RELIEVES ITCHINESS AND IRRITATION: This beard oil effectively alleviates common skin discomforts such as itchiness and irritation after shaving. Its natural plant extracts deeply hydrate the skin, soothing and protecting your facial skin while reducing dryness and redness, enhancing the softness and shine of your beard.",
+      "FRESH NATURAL FRAGRANCE TO BOOST CONFIDENCE: The oil releases a fresh, natural scent that is gentle and not overwhelming, yet long-lasting, providing a refreshing and enjoyable experience throughout the day. Whether at home or at work or outdoor activities, the fragrance helps boost your confidence and highlight your unique charm."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41ZniZoM+UL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41ZniZoM+UL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41ZniZoM+UL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FKMZ8BX6",
+    "title": "XIKEZAN Beard Oil,Beard Oil for Men,120ml/4.25 OZ Large Volume Sandalwood Natural Beard Growth Oil,Promote Beard Care Growth Mustaches Soften Strength Leave in Conditioner,Unique Gifts for Men Him Dad",
+    "url": "https://www.amazon.com/dp/B0FKMZ8BX6?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "XIKEZAN",
+    "features": [
+      "\u3010Superior Value Large-Volume 4.25Fl Oz Beard Oil\u3011Unlike other brands, we are the original manufacturers. Our direct-from-factory approach ensures rigorous quality control over our unique formula and premium ingredients, while eliminating middlemancosts.",
+      "\u3010Goodbye Itch And Dandruff \u3011 Our mens beard oil is specially formulated to strengthen and nourish facial hair.It deeply moisturizes to soothe itchy,dry skin and eliminate flakes,while taming dryness,split ends,and frizz.The result is a manageable beard that is soft,smooth and touchably sleek.",
+      "\u3010Promote Healthier Growth\u3011Infused with nourishing jojoba and argan oils,our sandalwood beard growth oil supports fuller beard growth for a stronger,healthier look.Say goodbye to patchy beards and embrace a robust, well-maintained style.",
+      "\u3010Non-Greasy, Natural Shine\u3011Experience a superior,non-greasy formula that absorbs quickly without any heavy residue.It provides a natural,healthy shine that's perfect for daily maintenance,whether you're applying it with your hands or a beard comb.",
+      "\u3010The Signature Sandalwood Scent\u3011Elevate your presence with the distinguished,warm aroma of sandalwood. This classic,masculine scent is bold yet never overpowering,adding a layer of refined sophistication to your daily grooming ritual.",
+      "\u3010The XIKEZAN Promise & Good Quality\u3011All beard products by XIKEZAN are made of high-quality materials,you can use them at ease,we will provide you with the finest products.Our sandalwood beard oil will be the ideal Birthday Gifts for Men,Valentines Gifts for Him, Father's Day Gifts for Dad,Christmas Gifts for Men,New Year Gifts for Boyfriend or Anniversary Gifts for Husband,Mens Stocking Stuffers."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/5118yDs9AhL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/5118yDs9AhL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/5118yDs9AhL._SL75_.jpg"
+  },
+  {
+    "asin": "B0F16TFVW3",
+    "title": "The Beard Club Biotin Beard Balm for Men - Beard Growth Shea Butter with Castor & Coconut Oil - Moisturizing, Hydrating and Softening Cream - Amber Cedar Scent - 4 oz",
+    "url": "https://www.amazon.com/dp/B0F16TFVW3?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "The Beard Club",
+    "features": [
+      "Support a Fuller, Thicker-Looking Beard \u2013 Infused with 2X biotin*, this beard balm deeply nourishes and strengthens facial hair, promoting a fuller-looking beard while softening coarse strands. (*vs. Beard Club Beard & Scruff Cream)",
+      "Condition & Soften \u2013 Packed with shea butter, castor oil, and coconut oil, this beard butter for men locks in moisture, tames flyaways, and smooths unruly hairs for effortless beard styling",
+      "Hydrate & Reduce Beard Discomfort \u2013 This non-greasy leave-in beard conditioner moisturizes the skin beneath, helping to reduce dryness and beard discomfort while keeping your beard soft, manageable, and touchably smooth all day long.",
+      "Lightweight, Non-Greasy Formula \u2013 Unlike heavy wax balms, this beard moisturizer for men absorbs quickly, leaving no sticky residue\u2014perfect for daily beard care, styling, and conditioning",
+      "Amber Cedar Scent for Freshness \u2013 This beard cream for men features a masculine amber cedar scent, keeping your beard smelling fresh while doubling as a beard softener, leave-in conditioner, and beard styling balm"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51Nw5nQ1hLL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51Nw5nQ1hLL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51Nw5nQ1hLL._SL75_.jpg"
+  },
+  {
+    "asin": "B01FWB4Z66",
+    "title": "Honest Amish - Premium Beard Oil - 2 Ounce",
+    "url": "https://www.amazon.com/dp/B01FWB4Z66?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Honest Amish",
+    "features": [
+      "Hand Crafted in the USA",
+      "Organic Ingredients",
+      "All Natural Ingredients",
+      "Softens Beard and Conditions Skin",
+      "The most trusted brand for beards in the world"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31xetfqXTuL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31xetfqXTuL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31xetfqXTuL._SL75_.jpg"
+  },
+  {
+    "asin": "B0F3HLXM3N",
+    "title": "Every Man Jack Men's Beard Oil - Aged Bourbon Fragrance - Deeply Moisturizes and Softens Your Beard and Adds a Natural Shine - Naturally Derived with Shea Butter and Argan Oil - 1 fl oz",
+    "url": "https://www.amazon.com/dp/B0F3HLXM3N?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Every Man Jack",
+    "features": [
+      "LOOK LIKE A LUMBERJACK. FEEL LIKE SILK: You don\u2019t have to suffer to look like a boss. Rub in our beard oil to soften your beard and nourish your skin and you\u2019ll be feeling as good as you look.",
+      "SMELL SWEET AND SPICY: Bourbon notes, woodsy Amber, with Vanilla Bean notes will have you smelling refined and distinguished",
+      "NATURALLY DERIVED INGREDIENTS: Rub in our blend of Naturally Derived Vitamin E, Argan, and Borage to soften, nourish, and finish with a healthy shine.",
+      "TRUSTED BY MORE THAN 5 MILLION MEN: Born at the base of Mt. Tam, CA. Proudly made in the US and B Corp Certified. Loved by millions of men the world over.",
+      "THE DREAM TEAM: With daily beard wash, hydrating oil, moisturizing butter, and styling balm, our all-star squad will take your beard care routine to championship levels."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41cOYpZabXL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41cOYpZabXL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41cOYpZabXL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
