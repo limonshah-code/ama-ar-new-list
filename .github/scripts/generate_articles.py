@@ -40,6 +40,11 @@ KEYWORDS_FILE = "data/keywords.txt"
 PROCESSED_KEYWORDS_FILE = "data/processed_keywords.txt"
 GENERATED_KEYWORDS_FILE = "data/keywords-generated.txt"
 LINKS_FILE = "data/links.txt"
+
+# --- NEW CONFIGURATION FOR NO ITEMS ---
+NO_ITEMS_FOLDER = "data/no_items_found"
+NO_ITEMS_FILE = os.path.join(NO_ITEMS_FOLDER, "NoItemFound.txt")
+
 ARTICLES_PER_RUN = 60
 TOP_LINKS_COUNT = 1
 
@@ -49,6 +54,8 @@ os.makedirs(ARTICLE_PROMPTS_DIR, exist_ok=True)
 os.makedirs(os.path.dirname(PROCESSED_KEYWORDS_FILE), exist_ok=True)
 os.makedirs(os.path.dirname(GENERATED_KEYWORDS_FILE), exist_ok=True)
 os.makedirs(os.path.dirname(LINKS_FILE), exist_ok=True)
+# Ensure the new No Items folder exists
+os.makedirs(NO_ITEMS_FOLDER, exist_ok=True)
 
 # Download NLTK data if needed
 try:
@@ -75,7 +82,7 @@ class APIKeyManager:
         self.api_keys = self._load_api_keys()
         self.current_key_index = 0
         self.key_usage_count = {}
-        self.max_requests_per_key = 20
+        self.max_requests_per_key = 35
         self.failed_keys = set()
         
         for key in self.api_keys:
@@ -618,7 +625,7 @@ def count_generated_prompts():
         print(f"Error counting prompt files: {e}")
         return 0
 
-def send_email_notification(titles, article_urls, prompt_lengths, remaining_keywords, total_prompts, recipient_email="limon.working@gmail.com"):
+def send_email_notification(titles, article_urls, prompt_lengths, remaining_keywords, total_prompts, recipient_email="beacleaner0@gmail.com"):
     from_email = "limon.working@gmail.com"
     app_password = os.environ.get("EMAIL_PASSWORD")
     if not app_password:
@@ -627,7 +634,7 @@ def send_email_notification(titles, article_urls, prompt_lengths, remaining_keyw
     msg = MIMEMultipart()
     msg['From'] = from_email
     msg['To'] = recipient_email
-    msg['Subject'] = f"Generated Image and Article Prompts New- {datetime.now().strftime('%Y-%m-%d %H:%M')}"
+    msg['Subject'] = f"Generated Image and Article Prompts - {datetime.now().strftime('%Y-%m-%d %H:%M')}"
     
     api_status = api_key_manager.get_status()
     status_text = "\n\nAPI Key Usage Status:\n"
@@ -826,134 +833,142 @@ def update_keyword_files(all_used_keywords, article_urls):
         else:
             print("Failed to update links file.")
 
+def handle_no_items_found(keyword):
+    """Appends the keyword to the NoItemFound.txt file in the separate folder."""
+    try:
+        os.makedirs(NO_ITEMS_FOLDER, exist_ok=True)
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        with open(NO_ITEMS_FILE, 'a', encoding='utf-8') as f:
+            f.write(f"{keyword}\n") # Just the keyword, or add timestamp: f.write(f"{keyword} - {timestamp}\n")
+        print(f"🚫 Keyword '{keyword}' moved to NoItemFound.txt")
+    except Exception as e:
+        print(f"Error saving to NoItemFound.txt: {e}")
+
 def main():
     print(f"🚀 Starting Image Generation and Article Prompt Creation at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print_separator("INITIALIZATION")
-    
+
     print(f"API Key Manager Status:")
     for key_id, status in api_key_manager.get_status().items():
         print(f"  {key_id}: {'Active' if status['active'] else 'Standby'}")
-    
+
     keywords, keywords_to_track = get_keywords()
     print(f"\n📋 Selected {len(keywords)} keywords for processing:")
     for i, keyword in enumerate(keywords, 1):
         print(f"  {i}. {keyword}")
-    
+
     successful_keywords = []
+    # Track keywords that returned no items so we can remove them from the main list
+    unsuccessful_keywords = [] 
+    
     article_urls = []
     prompt_lengths = []
     default_image_url = "https://res.cloudinary.com/dbcpfy04c/image/upload/v1743184673/images_k6zam3.png"
-    
+
     for i, title in enumerate(keywords, 1):
         print_separator(f"PROCESSING ITEM #{i}: {title.upper()}")
-        
+
         try:
             # Create URL slug and article URL
             slug = create_slug(title)
             article_url = f"https://www.homeessentialsguide.com/{slug}"
             print(f"📝 Article URL: {article_url}")
-            
-            # Generate and upload header image
+
+            # 🔹 STEP 1: Fetch Amazon products FIRST
+            print(f"\n🛒 Fetching Amazon products for: {title}")
+            products = fetch_amazon_products(title)
+
+            if not products:
+                print("❌ No items found for this keyword.")
+                print("🚫 Moving keyword to No Items list...")
+                
+                # Move to separate folder/file
+                handle_no_items_found(title)
+                
+                # Add to unsuccessful list so it gets removed from main CSV
+                unsuccessful_keywords.append(title)
+                
+                print("🚫 Skipping header image generation and article creation.")
+                continue
+
+            print(f"✅ Successfully fetched {len(products)} products")
+
+            # 🔹 STEP 2: Generate header image ONLY if products exist
             print("\n🎨 Generating header image...")
             image_url = generate_and_upload_image(title)
+
             if not image_url:
                 print(f"⚠️ Using default image URL: {default_image_url}")
                 image_url = default_image_url
             else:
                 print(f"✅ Generated image URL: {image_url}")
-            
-            # Fetch Amazon products
-            print(f"\n🛒 Fetching Amazon products for: {title}")
-            products = fetch_amazon_products(title)
-            if not products:
-                print("❌ No products fetched, skipping to next keyword")
-                continue
-            
-            print(f"✅ Successfully fetched {len(products)} products")
-            
-            # Create enhanced article prompt
+
+            # 🔹 STEP 3: Create article prompt
             print("\n✍️ Creating article prompt...")
             prompt = create_enhanced_article_prompt(title, i, image_url, products)
             prompt_length = len(prompt)
             prompt_lengths.append(prompt_length)
             print(f"📊 Prompt length: {prompt_length} characters")
-            
-            # Save prompt to file
+
+            # Save prompt
             prompt_filename = f"{ARTICLE_PROMPTS_DIR}/{title.lower().replace(' ', '-')}.txt"
-            try:
-                os.makedirs(os.path.dirname(prompt_filename), exist_ok=True)
-                with open(prompt_filename, "w", encoding="utf-8") as f:
-                    f.write(prompt)
-                print(f"✅ Prompt saved to {prompt_filename}")
-            except Exception as e:
-                print(f"❌ Error saving prompt to {prompt_filename}: {e}")
-            
+            os.makedirs(os.path.dirname(prompt_filename), exist_ok=True)
+            with open(prompt_filename, "w", encoding="utf-8") as f:
+                f.write(prompt)
+
+            print(f"✅ Prompt saved to {prompt_filename}")
+
             successful_keywords.append(title)
             article_urls.append(article_url)
-            
+
         except Exception as e:
             print(f"❌ Error processing keyword '{title}': {e}")
             continue
-        
-        # Rate limiting between items
+
         if i < len(keywords):
             print("\n⏳ Waiting 10 seconds before next item...")
             time.sleep(10)
-    
-    # Get remaining keywords count
+
+    # Combine successful and unsuccessful keywords to remove ALL processed keywords from the source file
+    all_processed_keywords = successful_keywords + unsuccessful_keywords
+
     all_keywords = read_keywords_from_csv(KEYWORDS_FILE)
-    remaining_keywords_count = len(all_keywords) - len(successful_keywords)
-    
-    # Count total prompts in folder
+    remaining_keywords_count = len(all_keywords) - len(all_processed_keywords)
     total_prompts_count = count_generated_prompts()
-    
-    # Final reporting
+
     print_separator("FINAL RESULTS")
-    
+
     print(f"📈 Final API Key Usage Status:")
     for key_id, status in api_key_manager.get_status().items():
         print(f"  {key_id}: {status['usage']}/{status['max_requests']} requests"
               f"{' (FAILED)' if status['failed'] else ''}")
-    
-    # Update keyword tracking files
+
     print("\n📁 Updating keyword files...")
-    update_keyword_files(successful_keywords, article_urls)
-    
-    # Send email notification
+    # Pass the combined list so both successful AND failed keywords are removed from keywords.txt
+    update_keyword_files(all_processed_keywords, article_urls)
+
     if successful_keywords:
         print("\n📧 Sending email notification...")
         send_email_notification(
-            successful_keywords, 
-            article_urls, 
+            successful_keywords,
+            article_urls,
             prompt_lengths,
             remaining_keywords_count,
             total_prompts_count
         )
-    
-    # Final summary
+
     print_separator("GENERATION COMPLETE")
     print(f"⏰ Completed at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"✅ Successfully processed: {len(successful_keywords)} keywords")
-    print(f"📊 Success rate: {(len(successful_keywords)/len(keywords)*100):.1f}%")
+    print(f"❌ No items found (moved): {len(unsuccessful_keywords)} keywords")
     print(f"📈 Remaining keywords in file: {remaining_keywords_count}")
     print(f"📁 Total prompts in folder: {total_prompts_count}")
-    
+
     if prompt_lengths:
         print(f"📝 Prompt length stats:")
-        print(f"   Average: {sum(prompt_lengths)/len(prompt_lengths):.0f} characters")
-        print(f"   Min: {min(prompt_lengths)} characters")
-        print(f"   Max: {max(prompt_lengths)} characters")
-    
-    print(f"\n📋 Processed Items:")
-    for i, (keyword, url, prompt_len) in enumerate(zip(successful_keywords, article_urls, prompt_lengths), 1):
-        print(f"  {i}. {keyword} ({prompt_len} chars)")
-        print(f"     → {url}")
-    
-    if len(successful_keywords) < len(keywords):
-        failed_keywords = [k for k in keywords if k not in successful_keywords]
-        print(f"\n⚠️ Failed Keywords ({len(failed_keywords)}):")
-        for keyword in failed_keywords:
-            print(f"  - {keyword}")
+        print(f"   Average: {sum(prompt_lengths)/len(prompt_lengths):.0f}")
+        print(f"   Min: {min(prompt_lengths)}")
+        print(f"   Max: {max(prompt_lengths)}")
 
 if __name__ == "__main__":
     main()
