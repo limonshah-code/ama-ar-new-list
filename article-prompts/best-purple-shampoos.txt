@@ -1,0 +1,322 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2026-01-16T00:51:03Z
+author: "Mason Everett"
+title: "Best Purple Shampoos"
+excerpt: "Discover the purple shampoos to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dbcpfy04c/image/upload/v1743184673/images_k6zam3.png
+category: "Reviews"
+tags:
+  - purple shampoos
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-purple-shampoos
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right purple shampoos
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Purple Shampoos" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best Purple Shampoos"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Purple Shampoos"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy purple shampoos?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose purple shampoos?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best purple shampoos for beginners?"
+- "How much should I spend on purple shampoos?"
+- "What features are most important in purple shampoos?"
+- "How do I maintain my purple shampoos?"
+- "Are expensive purple shampoos worth it?"
+- "What brands make the best purple shampoos?"
+- "How long do purple shampoos typically last?"
+- "Can I find good purple shampoos on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with product URL (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B084D2165G",
+    "title": "Clairol Professional Shimmer Lights Purple Shampoo, 16 fl. Oz, Neutralizes Brass & Yellow Tones, For Blonde, Silver, Gray & Highlighted Hair Packaging May Vary",
+    "url": "https://www.amazon.com/dp/B084D2165G?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Clairol Professional",
+    "features": [
+      "Removes dull yellow in gray white hair",
+      "Leaves hair shiny without residue",
+      "Renews and refreshes faded highlights."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31k1ALbFW+L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31k1ALbFW+L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31k1ALbFW+L._SL75_.jpg"
+  },
+  {
+    "asin": "B00RWCDM4A",
+    "title": "Fanola No Yellow Purple Shampoo - Purple Color Depositing Shampoo for Blondes, Bleached & Grey Hair - Formulated with Violet Pigment to Remove Brassy Tones from Hair (11.83 Fl oz)",
+    "url": "https://www.amazon.com/dp/B00RWCDM4A?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Fanola",
+    "features": [
+      "Say Goodbye to Yellow Tones - Fanola No Yellow purple shampoo for women and men is formulated with an Extra Violet Pigment. The rich hue instantly neutralizes brassy and yellow tones, making it the perfect shampoo for grey hair, blondes, and those with bleached hair.",
+      "Enhances Shine and Softness - Not only does it neutralize brassiness, but this purple toning shampoo also enhances the hair\u2019s radiance and silkiness. A typical purple shampoo for blondes can be drying, but No Yellow leaves your locks looking healthier, shinier, and more luminous.",
+      "How to Use - Apply the toning shampoo and massage into the scalp. Leave on for 1 to 5 minutes before rinsing out. Reapply depending on your desired result. Follow up with one of our moisturizing conditioners or hair masks to lock in hydration and prolong color.",
+      "At-Home Toning Solution - Preserve your preferred cool tone in between color services with this purple shampoo for blonde hair. Get salon-quality results at home by pairing with Fanola's No Yellow Mask and No Yellow Hair Color.",
+      "Professional Hair Care Made in Italy - Fanola is a professional Italian hair care brand that aims for the highest quality values, processes, and ingredients across all products. Inclusive beauty is at the brand's core with over 10 different product ranges in professional hair care, with this neutralizing shampoo being no exception."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31SM2b1ejqL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31SM2b1ejqL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31SM2b1ejqL._SL75_.jpg"
+  },
+  {
+    "asin": "B09FYK7FKR",
+    "title": "Olaplex N\u00ba. 4P Blonde Enhancer Purple Toning Shampoo: Neutralizes Brassiness & Strengthen | Repairs Damages & Hydrates Hair| For Coily, Curly, Straight, and Wavy, 250 mL / 8.5 Fl. Oz",
+    "url": "https://www.amazon.com/dp/B09FYK7FKR?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Olaplex",
+    "features": [
+      "Item display volume 250.0 milliliters"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41nsGWMhCoL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41nsGWMhCoL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41nsGWMhCoL._SL75_.jpg"
+  },
+  {
+    "asin": "B08SSGQJS7",
+    "title": "Redken Blondage Color Depositing Purple Shampoo For Blonde, Bleached or Highlighted Hair - Neutralizes Brassy Tones With Salicylic Acid, 10.1 Fl Oz",
+    "url": "https://www.amazon.com/dp/B08SSGQJS7?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Redken",
+    "features": [
+      "Color Depositing Purple Shampoo: A professional salon shampoo for color-treated or chemically-treated hair, including bleached hair. Neutralizes brassy, yellow and orange undertones",
+      "Benefits: With purple pigments to instantly tone, strengthen and moisture blonde, bleached, and color treated hair. Helps with color retention, anti-fade protection and maximizes color vibrancy for a cooler blonde result",
+      "Additional Benefits: Cleanses, strengthens and adds softness. With salicylic acid to strengthen and repair blonde hair from the core and pure violet pigments to remove unwanted brassiness and leave hair color cool and bright",
+      "Suggested Use: Use 2-3 times a week. Apply and leave on for 3-5 minutes. Anti-Brass pigmented purple formula with protein, amino acids and glycerin to ensure brighter, cooler blonde hair",
+      "Blondage: Nourishes, increases smoothness and shine, and strengthens blonde hair for less breakage. Color correct and neutralize unwanted yellow undertones for brassiest blonde hair"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31tntNXeArL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31tntNXeArL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31tntNXeArL._SL75_.jpg"
+  },
+  {
+    "asin": "B0842YD1CX",
+    "title": "L\u2019Oreal Paris EverPure Sulfate Free Brass Toning Purple Shampoo and Conditioner Set for Blonde, Bleached, Silver, or Brown Highlighted Hair, 1 Kit",
+    "url": "https://www.amazon.com/dp/B0842YD1CX?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "L'Oreal Paris",
+    "features": [
+      "Toning Sulfate Free Shampoo & Conditioner: Maintain your perfect blonde with EverPure's Sulfate Free Brass Toning Purple Shampoo and Conditioner that hydrates and neutralizes brassy yellow and orange tones in blonde, bleached, highlighted and silver hair",
+      "Hydrating Formula: Color-treated hair requires special care. This moisturizing shampoo and conditioner is infused with Hibiscus and Purple Dye to tone brassy hair and leave it deeply moisturized",
+      "For Best Results: Use EverPure's Purple Shampoo and Conditioner system 2-3 times a week instead of your normal shampoo and conditioner routine. Lather purple shampoo into wet hair, leave in for up to 2 minutes. Follow with purple conditioner",
+      "Vegan Shampoo and Conditioner: EverPure hair products have the purest respect for your hair and have been formulated without sulfates, parabens and harsh salts. Always color caring and powered by science",
+      "L'Oreal Paris Innovation: We are a total beauty care company that combines the latest in technology with the highest in quality for the ultimate in hair color, hair care, hair style, skin care and cosmetics"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51J6eMNg4eL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51J6eMNg4eL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51J6eMNg4eL._SL75_.jpg"
+  },
+  {
+    "asin": "B082B5GPTV",
+    "title": "Clairol Professional Shimmer Lights Purple Shampoo, 8 fl. Oz | Neutralizes Brass & Yellow Tones | For Blonde, Silver, Gray & Highlighted Hair **Packaging May Vary",
+    "url": "https://www.amazon.com/dp/B082B5GPTV?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Clairol Professional",
+    "features": [
+      "Color-enhancing shampoo brightens and refreshes blonde, highlighted and silver hair.",
+      "Renews and refreshes faded highlights and ash-toned hair.",
+      "Removes the dull yellow in silver hair, and leaves hair shiny without residue."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31dZ2kZIEtL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31dZ2kZIEtL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31dZ2kZIEtL._SL75_.jpg"
+  },
+  {
+    "asin": "B00CGPMEAQ",
+    "title": "Fanola No Yellow Purple Shampoo - Purple Color Depositing Shampoo for Blondes, Bleached & Grey Hair - Formulated with Violet Pigment to Remove Brassy Tones from Hair (33.8 Fl oz)",
+    "url": "https://www.amazon.com/dp/B00CGPMEAQ?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Fanola",
+    "features": [
+      "Say Goodbye to Yellow Tones - Fanola No Yellow purple shampoo for women and men is formulated with an Extra Violet Pigment. The rich hue instantly neutralizes brassy and yellow tones, making it the perfect shampoo for grey hair, blondes, and those with bleached hair.",
+      "Enhances Shine and Softness - Not only does it neutralize brassiness, but this purple toning shampoo also enhances the hair\u2019s radiance and silkiness. A typical purple shampoo for blondes can be drying, but No Yellow leaves your locks looking healthier, shinier, and more luminous.",
+      "How to Use - Apply the toning shampoo and massage into the scalp. Leave on for 1 to 5 minutes before rinsing out. Reapply depending on your desired result. Follow up with one of our moisturizing conditioners or hair masks to lock in hydration and prolong color.",
+      "At-Home Toning Solution - Preserve your preferred cool tone in between color services with this purple shampoo for blonde hair. Get salon-quality results at home by pairing with Fanola's No Yellow Mask and No Yellow Hair Color.",
+      "Professional Hair Care Made in Italy - Fanola is a professional Italian hair care brand that aims for the highest quality values, processes, and ingredients across all products. Inclusive beauty is at the brand's core with over 10 different product ranges in professional hair care, with this neutralizing shampoo being no exception."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31-JPIVSuXL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31-JPIVSuXL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31-JPIVSuXL._SL75_.jpg"
+  },
+  {
+    "asin": "B07P7L1HFN",
+    "title": "L\u2019Oreal Paris Sulfate Free Brass Toning Purple Shampoo for Blonde, Bleached, Silver, or Brown Highlighted Hair, EverPure, 6.8 Fl Oz (Packaging May Vary)",
+    "url": "https://www.amazon.com/dp/B07P7L1HFN?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "L'Oreal Paris",
+    "features": [
+      "Toning Sulfate Free Shampoo: Maintain your perfect blonde with EverPure's Sulfate Free Brass Toning Purple Shampoo that hydrates and neutralizes brassy yellow and orange tones in blonde, bleached, highlighted and silver hair",
+      "Hydrating Shampoo Formula: Color-treated hair requires special care. This moisturizing shampoo is infused with Hibiscus and Purple Dye to tone brassy hair and leave it deeply moisturized",
+      "For Best Results: Use EverPure's Purple Shampoo and Conditioner system 2-3 times a week instead of your normal shampoo and conditioner routine. Lather purple shampoo into wet hair, leave in for up to 2 minutes. Follow with purple conditioner",
+      "Vegan Shampoo: EverPure hair products have the purest respect for your hair and have been formulated without sulfates, parabens and harsh salts. Always color caring and powered by science",
+      "L'Oreal Paris Innovation: We are a total beauty care company that combines the latest in technology with the highest in quality for the ultimate in hair color, hair care, hair style, skin care and cosmetics"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41r5cwZDZ1L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41r5cwZDZ1L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41r5cwZDZ1L._SL75_.jpg"
+  },
+  {
+    "asin": "B07Q3GRC5R",
+    "title": "Biolage Color Last Purple Shampoo | Neutralizes Brass & Unwanted Yellow Tones | With Fig & Orchid | Paraben-Free | For Color Treated Hair | Vegan | Cruelty Free | Professional Shampoo | 33.8 Fl. Oz",
+    "url": "https://www.amazon.com/dp/B07Q3GRC5R?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Biolage",
+    "features": [
+      "Toning Shampoo: Purple pigment depositing shampoo that neutralizes brass and yellow tones in lightened, blonde hair to restore cool tones while strengthening the hair to protect and prevent damage",
+      "Benefits: Professional hair product that deposits purple dye to revive cool undertones in blondes that have turned brassy or yellow, by neutralizing warm tones for fresh, bright, healthy hair color",
+      "Additional Benefits: This vegan and paraben-free formula leaves blonde and lightened hair toned, silky, shiny, 2.5X smoother and with 3X less breakge to keep hair healthy in between salon visits",
+      "Suggested Use: Apply to wet hair, massage and lather into hair. For maximum toning benefits, leave in for 3-5 minutes. Rinse thoroughly. Follow with Color Last conditioner for best results",
+      "Color Last Collection: Color preserving system for all color-treated hair tyoes that keeps hair shiny and healthy. Purple shampoo can be used weekly to maintain cool hair tones in between salon visits"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/21RkLoLcvJL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/21RkLoLcvJL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/21RkLoLcvJL._SL75_.jpg"
+  },
+  {
+    "asin": "B0C7DSKJ1D",
+    "title": "amika bust your brass cool blonde strength repair shampoo, 275ml",
+    "url": "https://www.amazon.com/dp/B0C7DSKJ1D?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Amika",
+    "features": [
+      "Tones Brassiness",
+      "Gently Cleanses",
+      "Strengthens and prevents future breakage"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31ZIXOzXT7L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31ZIXOzXT7L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31ZIXOzXT7L._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
