@@ -1,0 +1,265 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2026-01-16T04:18:11Z
+author: "Mason Everett"
+title: "Best Home Lighting"
+excerpt: "Discover the home lighting to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dbcpfy04c/image/upload/v1743184673/images_k6zam3.png
+category: "Reviews"
+tags:
+  - home lighting
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-home-lighting
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right home lighting
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Home Lighting" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 8 Best Home Lighting"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Home Lighting"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy home lighting?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose home lighting?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best home lighting for beginners?"
+- "How much should I spend on home lighting?"
+- "What features are most important in home lighting?"
+- "How do I maintain my home lighting?"
+- "Are expensive home lighting worth it?"
+- "What brands make the best home lighting?"
+- "How long do home lighting typically last?"
+- "Can I find good home lighting on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with product URL (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "1554077109",
+    "title": "The Home Lighting Effects Bible: Ideas and Know-How for Better Lighting in Every Part of Your Home",
+    "url": "https://www.amazon.com/dp/1554077109?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Firefly Books Ltd",
+    "features": [],
+    "image_large": "https://m.media-amazon.com/images/I/51-zWIErW2L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51-zWIErW2L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51-zWIErW2L._SL75_.jpg"
+  },
+  {
+    "asin": "B0991Q94KP",
+    "title": "Govee RGBIC LED Strip Lights, Smart LED Lights for Bedroom, Bluetooth LED Lights APP Control, DIY Multiple Colors on One Line, Color Changing LED Strip Lighting Music Sync, Home Decor, 16.4ft",
+    "url": "https://www.amazon.com/dp/B0991Q94KP?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Govee",
+    "features": [
+      "Smart RGBIC Effects: RGBIC LED Strip lights for bedroom display multiple colors on one line at a time compared with traditional RGB lights. A colorful combination of LED strip lighting for bedroom brings a strong visual impact. (Not Support Alexa)",
+      "Smart APP Control: You can unlock various features to personalize smart LED strip lighting via Govee Home App, getting rid of simple remote control. Adjust the colors and brightness to your preferences, turning a single light to vivid light shows.",
+      "DIY with Inspiration: You can choose from a variety of lighting effects (16 million colors) and share your piece of art on the APP community. Also, we will regularly update AI-created themes on the APP to provide you with more options.",
+      "Upgraded Music Sync Mode: Make your smart LED strip lighting for dance for an immersive home concert experience. Choose from 11 music modes and the integrated high-sensitivity mic will effortlessly sync with your favorite audio.",
+      "64+ Preset Scenes: Find the proper lighting effects that fit your emotions. You can choose from a selection of scenes to bring vivid colors, inspired by party, holidays, movie and more with a simple click on the Govee Home App.",
+      "Note: Please wipe the surface well to make it clean and dry before intalling the smart LED strip lighting. Hair, dust and other stuff may affect the stickiness of the tape. (Not recommended for outdoor use.)"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51x8uUsdLeL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51x8uUsdLeL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51x8uUsdLeL._SL75_.jpg"
+  },
+  {
+    "asin": "0593139313",
+    "title": "The Interior Design Handbook: Furnish, Decorate, and Style Your Space",
+    "url": "https://www.amazon.com/dp/0593139313?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Clarkson Potter",
+    "features": [],
+    "image_large": "https://m.media-amazon.com/images/I/51GCbA6dRHL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51GCbA6dRHL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51GCbA6dRHL._SL75_.jpg"
+  },
+  {
+    "asin": "0063219247",
+    "title": "150 Best All New House Ideas",
+    "url": "https://www.amazon.com/dp/0063219247?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "N/A",
+    "features": [],
+    "image_large": "https://m.media-amazon.com/images/I/51s-M96TrsL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51s-M96TrsL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51s-M96TrsL._SL75_.jpg"
+  },
+  {
+    "asin": "0470114223",
+    "title": "Interior Lighting for Designers",
+    "url": "https://www.amazon.com/dp/0470114223?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Wiley",
+    "features": [],
+    "image_large": "https://m.media-amazon.com/images/I/517PH-gRl1L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/517PH-gRl1L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/517PH-gRl1L._SL75_.jpg"
+  },
+  {
+    "asin": "B0BRCJL4MM",
+    "title": "Pzloz Led Desk Lamp for Office Home - Eye Caring Architect lamp with Clamp,Dual Screen Computer Monitor Work Smart Light: 24W 5 Color Flexible Adjustable Lighting Table Lamp for Study Drafting",
+    "url": "https://www.amazon.com/dp/B0BRCJL4MM?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Pzloz",
+    "features": [
+      "Versatile Lighting Options: This LED desk lamp offers 25 light combination modes with 5 color temperatures (3000K-5500K) and 5 brightness levels (20%-100%), along with night light and reading modes, catering to various lighting needs.",
+      "Adjustable Design for Optimal Lighting: With a 360\u00b0 standing, 180\u00b0 foldable swing arms, and a 270\u00b0 rotatable lamp head, this lamp can be adjusted to any angle, ensuring suitable lighting coverage for workspaces, reading, studying, drawing, sewing, and crafting.",
+      "Wireless Remote Control: Equipped with a wireless smart remote control, this lamp allows you to easily switch between modes and brightness levels, providing a convenient and portable lighting experience.",
+      "Energy-Efficient and Eye-Friendly: Featuring LED technology, this desk lamp offers even illumination without glare, flicker, or blue light hazard, reducing eye strain and promoting a comfortable working environment.",
+      "Note: If your remote control isn't working, for a free replacement\u2014no return needed."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41sggzaNbPL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41sggzaNbPL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41sggzaNbPL._SL75_.jpg"
+  },
+  {
+    "asin": "0718002431",
+    "title": "NKJV, Lighting the Way Home Family Bible, Hardcover, Red Letter: Holy Bible, New King James Version",
+    "url": "https://www.amazon.com/dp/0718002431?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Thomas Nelson",
+    "features": [],
+    "image_large": "https://m.media-amazon.com/images/I/41RRwJo6OUL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41RRwJo6OUL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41RRwJo6OUL._SL75_.jpg"
+  },
+  {
+    "asin": "006280197X",
+    "title": "Homebody: A Guide to Creating Spaces You Never Want to Leave",
+    "url": "https://www.amazon.com/dp/006280197X?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Harper",
+    "features": [],
+    "image_large": "https://m.media-amazon.com/images/I/51pSwayiwuL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51pSwayiwuL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51pSwayiwuL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
