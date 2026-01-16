@@ -1,0 +1,317 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2026-01-17T17:26:24Z
+author: "Mason Everett"
+title: "Best Green Lamps"
+excerpt: "Discover the green lamps to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dky6urpy2/image/upload/v1768584383/blog_image_1768584383_kcdmyz.webp
+category: "Reviews"
+tags:
+  - green lamps
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-green-lamps
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right green lamps
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Green Lamps" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 9 Best Green Lamps"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Green Lamps"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy green lamps?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose green lamps?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best green lamps for beginners?"
+- "How much should I spend on green lamps?"
+- "What features are most important in green lamps?"
+- "How do I maintain my green lamps?"
+- "Are expensive green lamps worth it?"
+- "What brands make the best green lamps?"
+- "How long do green lamps typically last?"
+- "Can I find good green lamps on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with product URL (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B0FKG5TSYK",
+    "title": "Seealle Farmhouse Table Lamps Set of 2 - Rustic Lamp for Bedroom Living Room, 22\" Boho Bedside Lamps for Night Stands End Table Office Desk Lamp Nightstand with Linen Shades(Antique Green)",
+    "url": "https://www.amazon.com/dp/B0FKG5TSYK?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Seealle",
+    "features": [
+      "Timeless Vintage Charm - Transform your space with our table lamps set of 2, featuring distressed farmhouse accents and charming retro-striped resin detailing. Perfect for bedrooms or entryways, these bedside lamps effortlessly blend with both modern and rustic decor, adding a touch of warmth and character to any room.",
+      "Your Light, Your Mood - Customize your lighting experience with our bedroom lamps, designed to accommodate a maximum 60W bulb (bulb not included). Whether you\u2019re reading, working, or simply unwinding, you have the freedom to choose the perfect lamps bulb that sets the mood just right.",
+      "Crafted for Comfort - Experience the soothing glow of our lamps for night stands, designed with your comfort in mind. The premium linen shade casts a soft, diffused light, creating a warm and inviting ambiance that\u2019s perfect for reading, relaxing, or enjoying tranquil moments at home.",
+      "One-Minute Setup - Setting up your new lamp for bedroom is a breeze! Thoughtfully designed for ease and sustainability, our farmhouse lamp require minimal assembly. With a step-by-step installation guide available online and all necessary accessories included in the packaging, you'll have your lamps ready to shine in no time.",
+      "Peace of Mind Guaranteed - Your satisfaction is our priority! Our dedicated customer service team is available 24/7 to assist you with any questions or concerns about your living room lamps set of 2. We\u2019re here to ensure your shopping experience is as delightful as the ambiance our rustic lamp create."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41IM9C1gUJL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41IM9C1gUJL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41IM9C1gUJL._SL75_.jpg"
+  },
+  {
+    "asin": "B0F93DQHDL",
+    "title": "QiMH Industrial Table Lamp for Bedroom Set of 2, Green Glass Beside Lamp with USB A&C Ports, Stepless Dimmable Gold Lamps, Nightstand Lamps for Living Room, Office, Home Decor(Bulb Included)",
+    "url": "https://www.amazon.com/dp/B0F93DQHDL?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "QiMH",
+    "features": [
+      "Exquisite Industrial Vintage Table Lamps Set: These unique lamps feature authentic mid-century design with green glass table lamp shades showcasing delicate ribbing, paired with lustrous gold-plated bases. Perfect as a lamp for bedroom or elegant living room lamps, they blend vintage lamp charm with modern industrial aesthetics to elevate bedrooms, offices, or lounge areas",
+      "Smooth Rotary Dimmer for Custom Ambiance: Experience seamless brightness control (0%-100%) with the effortless rotary dimmer switch \u2013 no harsh steps like 3-level glass lamp. Ideal as bedroom lamps for sleep with soft glow or living room lamp for task lighting. The modern table lamp design offers single-knob operation suitable for nightstand lamp use during reading sessions or as lamps for night stands in dim environments.",
+      "Universal USB A+C Charging Ports: The lamps for night stands quipped with dual USB A+C ports \u2013 functional whether these bedside lamps are illuminated or switched off. Conveniently charge phones, tablets, Kindles, or mini humidifiers using this versatile bedside lamps set of 2, eliminating bedside outlet shortages while enhancing your relaxation moments.",
+      "Premium 2700K Bulbs & Soothing Glow: Includes two dimmable LED bulbs (2700K) that emit eye-comforting light through the handcrafted green glass lamp shades. Creates museum-grade ambiance as bedroom lamps set of 2 on nightstands or table lamps for living room accent pieces, reducing blue-light exposure for evening relaxation.Truly, the lamps set of 2 are your faithful bedside companion.",
+      "Durable Construction & 5-Minute Assembly: Heavy-duty metal bases and reinforced glass shades ensure decades of use. This table lamps set of 2 requires no tools \u2013 simply screw bulbs, attach shades, and plug in. Perfect as sturdy lamps for living room decor or night stand lamp solutions, backed by our 12-month guarantee and lifetime support.The small lamp is truly your go-to choice."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41N-deb0Z0L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41N-deb0Z0L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41N-deb0Z0L._SL75_.jpg"
+  },
+  {
+    "asin": "B0F6Y2TCLK",
+    "title": "PoKat 23\" Dark Green Ceramic Table Lamps Set of 2, Modern Table Lamps for Living Room, Farmhouse Lamps for Bedroom Night Stands, Traditional Nightstand Desk Decor Lamps",
+    "url": "https://www.amazon.com/dp/B0F6Y2TCLK?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "PoKat",
+    "features": [
+      "INSTALLATION REQUIRED for LAMPSHADE: To minimize unnecessary packaging waste and to save transport fees, we have meticulously sought out the most efficient packing method. This enables us to give customers more cost-effective products, allowing you to buy high-quality items at a more affordable price. Pokat dark green lamp sets of 2 comes with all the necessary installation accessories and a manual in the package. Following the instructions, you can set up the lamps for living room easily.",
+      "UPGRADED NEW DARK GREEN: Pokat lamp for bedroom, like an envoy of nature, blend into any home decor style. Its color echoes that of the indoor plants, skillfully creating an indoor natural ecosystem and turning your home into an oasis in the city. Whether it's the simple and cozy atmosphere created by light colored furniture or the calm and elegant style presented by dark or light colored furniture, Pokat table lamps for living room can complement them perfectly. With a touch of freshness, this bedside lamps breaks the dullness and endows the space with vivid vitality.",
+      "Perfect Size: Lamp Height - 23\u2019\u2019 (H). Pokat green table lamps has a perfect size, making Pokat bedroom lamps suitable for living room, hallway, console table, end table, nightstands or bedside, workspace, kids' room or home office. ( Bulb is not Included)",
+      "Reliable After Sales Team: We are proud to offer a 2-year protection plan on all lamps for night stands, ensuring you have peace of mind with your purchase. Every table lamps for living room goes through a rigorous quality check before being sold, guaranteeing its reliability and durability. 24/7 available after sales team assists you with any questions or concerns, providing excellent solutions and ensuring your satisfaction. You can rely on us for top-notch products.",
+      "Ideal Present and Decor: Elevate your home decor with Pokat green living room lamps, which also serves as a perfect decorative piece. This table lamps set of 2\u2019 modern design add character and warmth to any space, creating a chic and inviting ambiance. Whether placed on a nightstand, bedside in bedroom or on end table, console table, hallway in the living room, this table lamp for bedroom house decor effortlessly enhances the overall aesthetic. To showcase your refined taste in decor, this modern and farmhouse lamps makes an ideal gift for housewarming, birthday, anniversary, wedding to her, friends, wife, women, mother, grandmother and men."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41HWNvemYpL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41HWNvemYpL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41HWNvemYpL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DFCNL4WG",
+    "title": "Reaketon Table Lamps for Living Room Set of 2, Ceramic Table Lamps for Bedroom, 20\" Modern Lamps for Night Stands, Green",
+    "url": "https://www.amazon.com/dp/B0DFCNL4WG?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Reaketon",
+    "features": [
+      "Superior Quality & Elegant Design-The living room lamps set of 2 are made with high quality ceramic body,resistant corrosion and anti-scratch for easy cleaning.ceramic lamp body will not fade as the time goes , more durable to use.exquisite patterns and elegant lamp body design upgrade your home decoration, suitable for your living room , bedroom, home office, dormitory,etc",
+      "Ideal Size&Perfect Present :20\"(H)x 4.3\"diameter at bottom,If you are looking for a great value present for your friends and familys , this gorgeous ceramic table lamps will be your great option.adding modern,farmhouse,vintage and rustic feeling.",
+      "Eye Protection Table Lamp for Bedroom-This table lamps set of 2 with fabric lampshade that we offer 3000k warm light ,making it bright enough for daily use, and soften the light to protect your eye,adding cozy feeling and romantic atmosphere.",
+      "Convenient Pull Chain Switch:Compared to traditional rotary switch, this zipper switch has more elegant and stylish design.adding a touch of elegance for your space.",
+      "Customer Service- If you have any confuse or problem with the table lamp set of 2 ,please contact with us , 24/7 customer service is here for you. Each table lamp features an E26 base that fits most A19 Bulbs,The ceramic lamps are compatible with LED, halogen, incandescent bulbs, Maximum power support is 60 W.\uff08Bulbs not included)"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41wjXlIYomL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41wjXlIYomL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41wjXlIYomL._SL75_.jpg"
+  },
+  {
+    "asin": "B0BW2Q7YXM",
+    "title": "G-SAFAVA 20.25\" Small Table Lamps Set of 2 Modern Ceramic Lamps for Living Room Farmhouse Bedside Lamps Boho Lamps for Night Stands Green Bedroom Lamp Side Table Lamps End Table Lamp",
+    "url": "https://www.amazon.com/dp/B0BW2Q7YXM?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "G-SAFAVA",
+    "features": [
+      "Compact Size: Table lamps with a compact size, overall 10\" D x 10\" W x 20.25\" H, an optimal choice of small room, such as nightstands, small tables, end tables, if placed it into a spacious room, please consider the size whether is acceptable before purchasing",
+      "Modern Design&Perfect Gift: A set of modern design ceramic table lamps with green and simple lamp body design. It can add an artistic touch to your home. Our bedside lamp is the perfect gift for family and friends",
+      "Great Value&Perfect Size: At 20.25 inches tall and 4.25 inches wide, this ceramic nightstand lamp looks compact and not too big for a nightstand or too small for a sofa side table. It is very suitable for decorating living room, bedroom, study room",
+      "Comfortable Glow: The lampshade of our table lamp is made of linen, which can effectively soften the light, make the light not dazzling, and protect your eyes. When you are get along with your family, our nightstand lamp can create a warm atmosphere for you, which is very suitable for living room and bedroom",
+      "Need to Assemble: Our bedside lamp needs to be assembled but it is not difficult, we will attach an instruction manual for you",
+      "Worry-free after sales: Our nightstand lamp have one year period"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41vBoX9mSLL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41vBoX9mSLL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41vBoX9mSLL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DDPSY391",
+    "title": "Seealle Modern Green Table Lamps Set of 2 - Bedside Lamps for Night Stands, 19.4\" Bedroom Lamps for Living Room Sage Green Lamps with Rocker Switch",
+    "url": "https://www.amazon.com/dp/B0DDPSY391?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Seealle",
+    "features": [
+      "\u3010Modern Design Matches Any Decor\u3011 These bedside lamps are sleek and stylish which gives a pop of subtle color to your bedroom\uff0cthe modern minimalistic design gives classic charm while the rocker switch adds a modern touch to your room\uff0cthese table lamps for night stands will enhance a lovely ambiance of your space, beautifully crafted to complement any decor style.",
+      "\u3010Great Quality & Durable Materials\u3011Made of high-end ceramics and a perfect shiny finish\uff0cthe lamp for bedroom is designed to last, resisting scratches and fading to maintain its gorgeous appearance\uff0cwith non-slip base and 59 inches US standard cord, these bedroom lamps set of 2 offer flexible placement in any room.",
+      "\u3010Two A19 LED Bulbs for Bonus\u3011The included LED bulbs with non-glare and non-flickering provide a warm glow, creates a cozy and inviting atmosphere that's perfect for unwinding after a long day\uff0cmaking the bedside lamps set of 2 perfect for your living room and bedroom\uff0cour nightstand lamps set of 2 is also ideal as a gift for family and friends.",
+      "\u3010Customer Satisfaction & Protection Plan\u3011Customer Focus is Our Service Philosophy! Our table lamp for bedroom is designed to improve your life . We are committed to providing our customers with a great shopping experience. Whatever the problem you meet, our dedicated team is here to offer prompt and friendly support within 24 hours.",
+      "\u3010Easy Installation & No-worry Buy\u3011In order to provide customers more cost-effective products\uff0cwe have minimized the packing to save your freight\uff0cthe lampshade of our bedside lamp has been rolled into a cylinder and placed in the package, please identify it carefully. They can be installed without tools in a few minutes\uff0cwe will attach an instruction manual for you, if you have any difficulties with the assembly, Please contact us in time."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31wi4daxoTL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31wi4daxoTL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31wi4daxoTL._SL75_.jpg"
+  },
+  {
+    "asin": "B09FZ4DHMP",
+    "title": "TORCHSTAR Green Glass Bankers Desk Lamp, Antique Desk Lamps with Brass Base, Traditional Library Lamp with Pull Chain, E26 Base, Vintage Desk Lamp for Office, Study Room",
+    "url": "https://www.amazon.com/dp/B09FZ4DHMP?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "TORCHSTAR",
+    "features": [
+      "Classic Style: Add a touch of retro style and nostalgic feeling with the traditional banker's style of this bankers lamp green, bringing a classic mid-century look to your interior furnishings",
+      "High Quality: The emerald green glass lampshade's beautifully smooth surface has been thickened and polished, making it discoloration resistant. The elegant and durable metal structure of the bankers lamps for desk won't rust or flake with age either",
+      "Easy to Install: The 6.3ft long power cord makes plug-n-play setup super easy. Compatible with standard E26 bulbs within 60W (not included), this banker lamp works with LED, incandescent, and halogen bulbs",
+      "Rotatable Lighting: The bankers lamp's lampshade can be rotated 350\u00b0, giving this green desk lamp a more flexible lighting direction. The vintage pull chain switch is both decorative and functional",
+      "Trusted Quality: The power cord is UL-listed, assuring the banker lamp's quality and safety. library lamps for desk also professional after-sales service"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41QB8JEHzaL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41QB8JEHzaL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41QB8JEHzaL._SL75_.jpg"
+  },
+  {
+    "asin": "B08N6VCXW2",
+    "title": "360 Lighting Gordy Modern Accent Table Lamp Handcrafted 20.5\" High Ribbed Green Ceramic Oatmeal Fabric Drum Shade Decor for Living Room Bedroom House Bedside Nightstand Home (Color May Vary)",
+    "url": "https://www.amazon.com/dp/B08N6VCXW2?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "360 Lighting",
+    "features": [
+      "\u3010Specifications\u3011UL listed. 20 1/2\" high overall. Base bottom is 5 1/2\" wide. Shade is 9\" high x 15\" wide. Weighs 7.7 lbs. Uses one maximum 150 watt standard-medium base bulb (not included). On-off socket switch.",
+      "\u3010Bedroom Serenity\u3011 Enhance your bed side with bedroom lamps for a nightstand that blend farmhouse charm with contemporary elegance. These bedside table lamps are perfect for reading and add a cozy accent lamp to your decor. Ideal as small lamps for small spaces, their unique design ensures they stand out while providing the perfect amount of light for your night stand.",
+      "\u3010Versatile Style\u3011 Brighten your home with a single table lamp that serves as both a decorative piece and a practical light source. Ideal for entryway or console tables, this beige ceramic table lamp fits perfectly in any country or tropical themed room. Handcrafted ribbed ceramic table lamp from the 360 Lighting brand. Inspired by Mid-Century and modern lamp styles.",
+      "\u3010Pre-Assembled Shades\u3011Hand-applied green glaze finish. Ceramic lamp base. Oatmeal textured fabric drum shade. 8-foot long clear cord and plug. Because the finish is hand-applied, there may be slight variations in pattern and color.",
+      "\u3010Living Room Elegance\u3011 Illuminate your end table with a mid century modern table lamp from Lamps Plus. This side table lamp adds a touch of sophistication to any living room setting. Its modern table lamp design complements coastal and contemporary decor, making it a perfect lamp for living room end tables. Enhance your space with this stylish and functional lighting solution."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41KUvFy6SyL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41KUvFy6SyL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41KUvFy6SyL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DHRJ1GL8",
+    "title": "PARTPHONER 23\" Modern Ceramic Table Lamp Set of 2, Table Lamps for Living Room, Rustic Farmhouse Bedside Lamps Nightstand lamp for Bedroom, Desk Lamp for End Table Home Decor Light Green",
+    "url": "https://www.amazon.com/dp/B0DHRJ1GL8?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "PARTPHONER",
+    "features": [
+      "Contemporary minimalist design: this set of 2 lamps features a light green finish for a rustic farmhouse look, perfect for a nightstand or bedside. The linen lampshade on top is the perfect finishing touch to these beautifully crafted bedside lamps. These farmhouse-style table lamps add a touch of elegance to your bedroom or living room, creating a serene ambiance in your space while staying warm and inviting",
+      "Visually pleasing: The PARTPHONER table lamp is designed to provide eye comfort. The lampshade of our bedside lamp is made of linen to ensure even and soft light distribution, protecting your eyes and creating a warm and cozy atmosphere in your home. Suitable for living rooms and bedrooms",
+      "Choice for safety: we attach great importance to the quality of our table lamps during production. Made of reliable materials, this nightstand lamp is made to last, resisting scratches and fading to maintain its gorgeous appearance for years. Each lamp uses a maximum 60-watt bulb (not included)",
+      "Ideal home decor option: enhance your home decor with our exquisite bedroom lamps. The modern design adds character and warmth to your house, creating a cozy ambiance. Place this beautiful desk lamp on a nightstand or console table, they will effortlessly enhance the overall aesthetic",
+      "Easy to assemble: assembling our table lamp set is super easy. No tools are needed, take a few minutes to install all the parts together. The PARTPHONER table lamps are constructed of reliable material which ensures long-lasting use"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41hcZLypP2L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41hcZLypP2L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41hcZLypP2L._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
