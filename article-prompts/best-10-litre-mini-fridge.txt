@@ -1,0 +1,328 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2026-02-18T02:52:42Z
+author: "Mason Everett"
+title: "Best 10 Litre Mini Fridge"
+excerpt: "Discover the 10 litre mini fridge to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dky6urpy2/image/upload/v1771296761/blog_image_1771296761_pghaex.webp
+category: "Reviews"
+tags:
+  - 10 litre mini fridge
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-10-litre-mini-fridge
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right 10 litre mini fridge
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best 10 Litre Mini Fridge" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best 10 Litre Mini Fridge"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best 10 Litre Mini Fridge"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy 10 litre mini fridge?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose 10 litre mini fridge?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best 10 litre mini fridge for beginners?"
+- "How much should I spend on 10 litre mini fridge?"
+- "What features are most important in 10 litre mini fridge?"
+- "How do I maintain my 10 litre mini fridge?"
+- "Are expensive 10 litre mini fridge worth it?"
+- "What brands make the best 10 litre mini fridge?"
+- "How long do 10 litre mini fridge typically last?"
+- "Can I find good 10 litre mini fridge on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with product URL (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B0FP2CSQ97",
+    "title": "Antarctic Star Compact Mini Fridge, 10L Portable Small Refrigerator, 2.6 Gal Mini Fridge with AC/DC Adapters, Small Cosmetics Cooler for Beverage, Food, Makeup, Bedroom, Office, Dorm, White",
+    "url": "https://www.amazon.com/dp/B0FP2CSQ97?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Antarctic Star",
+    "features": [
+      "\u301010L CAPACITY COMPACT MINI FRIDGE\u3011: Our 10L portable small refrigerator with removable shelf inside and a handle on the top for portable use built. This compact refrigerator dimensions are 9.8\"D x 12.8\"W x 13.9\"H, 8.38lbs.",
+      "\u3010AC/DC SUPPLY OPTIONS\u3011The compact mini fridge fridge is equipped with a household power cord (AC-110V) and a car power cord(DC-12V).You can connect the compact refrigerator to a 100-120V home power supply, or you can connect to a 12V car power supply.",
+      "\u3010HIGH EFFICIENT COOLING\u3011Compact refrigerator adopts thermoelectric technology cooling, which is fast, effective. cool up to 32\u00b0F (18\u00b0C) below ambient temperature, 86\u00b0F (30\u00b0C) -64\u00b0F (18\u00b0C) within an hour, 86\u00b0F (30\u00b0C) -50\u00b0F (10\u00b0C) within 2 hours, 86\u00b0F (30\u00b0C)-40\u00b0F( 4\u00b0C) within 3 hours. Please note :it should be placed in a location with at least 3 inches of clearance on all sides.",
+      "\u3010QUIET & ENERGY SAVING\u3011The skincare mini fridge reduce to 38 dB less disruptive to work and everyday life, It ensures that your environment keep quiet whether in the bedroom, office, or baby's room.",
+      "\u3010PORTABLE & VERSATILE\u3011Small cooler lightweight and freestanding, fits effortlessly on countertops or shelves and is a good choice for you to store foods, drinks, beer, makeup and skincare. Suitable for your bedroom, office, dorm, travel, boating, camping and so on."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41z-o-CqAPL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41z-o-CqAPL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41z-o-CqAPL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FP29WLV1",
+    "title": "Antarctic Star Compact Mini Fridge, 10L Portable Small Refrigerator, 2.6 Gal Mini Fridge with AC/DC Adapters, Small Cosmetics Cooler for Beverage, Food, Makeup, Bedroom, Office, Dorm, Black",
+    "url": "https://www.amazon.com/dp/B0FP29WLV1?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Antarctic Star",
+    "features": [
+      "\u301010L CAPACITY COMPACT MINI FRIDGE\u3011: Our 10L portable small refrigerator with removable shelf inside and a handle on the top for portable use built. This compact refrigerator dimensions are 9.8\"D x 12.8\"W x 13.9\"H, 8.38lbs.",
+      "\u3010AC/DC SUPPLY OPTIONS\u3011The compact mini fridge fridge is equipped with a household power cord (AC-110V) and a car power cord(DC-12V).You can connect the compact refrigerator to a 100-120V home power supply, or you can connect to a 12V car power supply.",
+      "\u3010HIGH EFFICIENT COOLING\u3011Compact refrigerator adopts thermoelectric technology cooling, which is fast, effective. cool up to 32\u00b0F (18\u00b0C) below ambient temperature, 86\u00b0F (30\u00b0C) -64\u00b0F (18\u00b0C) within an hour, 86\u00b0F (30\u00b0C) -50\u00b0F (10\u00b0C) within 2 hours, 86\u00b0F (30\u00b0C)-40\u00b0F( 4\u00b0C) within 3 hours. Please note :it should be placed in a location with at least 3 inches of clearance on all sides.",
+      "\u3010QUIET & ENERGY SAVING\u3011The skincare mini fridge reduce to 38 dB less disruptive to work and everyday life, It ensures that your environment keep quiet whether in the bedroom, office, or baby's room.",
+      "\u3010PORTABLE & VERSATILE\u3011Small cooler lightweight and freestanding, fits effortlessly on countertops or shelves and is a good choice for you to store foods, drinks, beer, makeup and skincare. Suitable for your bedroom, office, dorm, travel, boating, camping and so on."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41WA-9D5tcL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41WA-9D5tcL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41WA-9D5tcL._SL75_.jpg"
+  },
+  {
+    "asin": "B08X6QBB2N",
+    "title": "Frigidaire Portable 10L, 15-can Mini Fridge Brushed Stainless Rugged Refrigerator, EFMIS188-SS",
+    "url": "https://www.amazon.com/dp/B08X6QBB2N?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Frigidaire",
+    "features": [
+      "MULTI-PURPOSE: Perfect for storing lunches, drinks, beers, baby bottles or even soups. Easy to clean and Fully insulated.Fresh Food Capacity: 10 liters.Cooling method:Thermoelectric",
+      "MAKEUP STORAGE: The bright LED light and mirrored door is perfect for doing your make-up at home or on the go. Ideal for dorms, drivers, cubicles, nurseries, or anywhere simple drink storage is needed",
+      "CHILL OR HEAT: Thermoelectric cooling system. Extend the shelf life of your favourite skin care products by keeping them chilled! Or you can set the refrigerator to heating mode to keep your morning coffee warm.",
+      "COMPACT PORTABLE DESIGN: Equipped with a carrier handle. An ideal accessory for your home, office, dorms, or even on the go.",
+      "CAPACITY/ RESOURCES: Stores up to 10L / 15 Cans. Powered by 110V (AC) Wall outlet. Cools up to 20 degrees F below ambient room temperature. Plugs into a 12V Car adapter or home outlet."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31y6oxYPAUL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31y6oxYPAUL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31y6oxYPAUL._SL75_.jpg"
+  },
+  {
+    "asin": "B0CVBHKC52",
+    "title": "Frigidaire Mini Personal Fridge Cooler, Countertop, Holds Up to 10L/15 Cans, Brushed Black Stainless Rugged Design, Portable for Skincare, Makeup, Car, Office, Bedroom, Dorm Room, or Cabin",
+    "url": "https://www.amazon.com/dp/B0CVBHKC52?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Frigidaire",
+    "features": [
+      "Ample Storage - With a 10L capacity, this electric cooler can store up to 15 cans of your favorite beverages or snacks, keeping them chilled and ready to enjoy.",
+      "Skincare Cooler - You can also use the interior space for skincare products and beauty tools, offering a refreshing twist to your daily routine.",
+      "Portable & Secure - Compact and portable with a convenient carrying handle, this mini fridge cooler is perfect for on-the-go use, weighing only 6lbs. With a heavy-duty locking latch and door hinge, your items will stay securely stored wherever you take it.",
+      "Modern Charm- Add a touch of elegance to your space with this compact mini cooler with a stylish brushed stainless steel door.",
+      "Versatile Power Options - Equipped with cords for both a 12V car adapter and a home outlet, this cooler fridge offers flexible power options, ensuring you can use it wherever you go.",
+      "Efficient Cooling - Utilizing a thermoelectric cooling system, this countertop mini fridge operates quietly and efficiently, cooling drinks to 26-28 degrees Fahrenheit below ambient room temperature for refreshing enjoyment. Note: The extent of cooling achieved by this small fridge cooler may vary based on the surrounding environment."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31ju11GZTUL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31ju11GZTUL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31ju11GZTUL._SL75_.jpg"
+  },
+  {
+    "asin": "B07Y8TXQHD",
+    "title": "Cooluli 10L Mini Fridge for Bedroom - Car, Office Desk & College Dorm Room 12v Portable Cooler Warmer Food, Drinks, Skincare, Beauty Makeup AC/DC Small Refrigerator with Glass Front, 110 Volts, White",
+    "url": "https://www.amazon.com/dp/B07Y8TXQHD?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Cooluli",
+    "features": [
+      "Convenient & Lightweight: The Cooluli Infinity 10-liter thermoelectric cooler/warmer mini fridge is chic and perfectly portable. This unit measures 9.4\" W x 11.4\" D x 13.4\" H and weighs 7.9 lbs.Cooling method:Thermoelectric",
+      "Quickly Switch from Cooling to Warming: Go from cooling to warming with one quick switch.",
+      "Ultra Versatile & Functional: The dual-voltage Infinity (AC 100\u2013240V/12V) works anywhere in the world. Use it as an extra storage space for food, drinks, breast milk, insulin, skincare, medications and other essentials.",
+      "Stylish Design: Sleek, glass-front mini refrigerator is ideal to use anywhere in your home, the nursery, office, dorm room, and on road trips, vacation, and tailgate parties.",
+      "Advanced Technology & Warranty: Features our advanced EcoMax Technology which uses minimum energy and prevents frost. The Infinity is supported by exceptional customer support and a limited 1-year warranty. Please refer to the Instruction Manual before use.",
+      "Inner Dimensions(W*D*H) : 9*9*13.5 inches"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/21IZAg3FbFL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/21IZAg3FbFL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/21IZAg3FbFL._SL75_.jpg"
+  },
+  {
+    "asin": "B07Y8TM6SW",
+    "title": "Cooluli 10L Mini Fridge for Bedroom, Car, Office Desk & Dorm - Portable Thermoelectric Cooler & Warmer for Food, Drinks, Skincare - AC/DC Refrigerator with Glass Front, Black",
+    "url": "https://www.amazon.com/dp/B07Y8TM6SW?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Cooluli",
+    "features": [
+      "Convenient & Lightweight: The Cooluli Infinity 10-liter thermoelectric cooler/warmer mini fridge is chic and perfectly portable. This unit measures 9.4\" W x 11.4\" D x 13.4\" H and weighs 7.9 lbs.Fresh Food Capacity: 10 liters.Cooling method:Thermoelectric",
+      "Quickly Switch from Cooling to Warming: Go from cooling to warming with one quick switch.",
+      "Ultra Versatile & Functional: The dual-voltage Infinity (AC 100\u2013240V/12V) works anywhere in the world. Use it as an extra storage space for food, drinks, breast milk, insulin, skincare, medications and other essentials.",
+      "Stylish Design: Sleek, glass-front mini refrigerator is ideal to use anywhere in your home, the nursery, office, dorm room, and on road trips, vacation, and tailgate parties.",
+      "Advanced Technology & Warranty: Features our advanced EcoMax Technology which uses minimum energy and prevents frost. The Infinity is supported by exceptional customer support and a limited 1-year warranty. Please refer to the Instruction Manual before use."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31DVc5msIiL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31DVc5msIiL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31DVc5msIiL._SL75_.jpg"
+  },
+  {
+    "asin": "B08DH91SJ9",
+    "title": "Cooluli 10L Mini Fridge for Bedroom - Car, Office Desk & Dorm Room 12v Portable Cooler Warmer Food, Drinks, Skincare, Beauty Makeup AC/DC Small Refrigerator with Glass Front, Fractal Pink",
+    "url": "https://www.amazon.com/dp/B08DH91SJ9?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Cooluli",
+    "features": [
+      "Convenient & Lightweight: The Cooluli Infinity 10-liter thermoelectric cooler/warmer mini fridge is chic and perfectly portable. This unit measures 9.4\" W x 11.4\" D x 13.4\" H and weighs 7.9 lbs.Cooling method:Thermoelectric",
+      "Quickly Switch from Cooling to Warming: Go from cooling to warming with one quick switch.",
+      "Ultra Versatile & Functional: The dual-voltage Infinity (AC 100\u2013240V/12V) works anywhere in the world. Use it as an extra storage space for food, drinks, breast milk, insulin, skincare, medications and other essentials.",
+      "Stylish Design: Sleek, glass-front mini refrigerator is ideal to use anywhere in your home, the nursery, office, dorm room, and on road trips, vacation, and tailgate parties.",
+      "Advanced Technology & Warranty: Features our advanced EcoMax Technology which uses minimum energy and prevents frost. The Infinity is supported by exceptional customer support and a limited 1-year warranty. Please refer to the Instruction Manual before use."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41X+balTwIL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41X+balTwIL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41X+balTwIL._SL75_.jpg"
+  },
+  {
+    "asin": "B07Y8TT7N5",
+    "title": "Cooluli 10L Mini Fridge for Bedroom - Car, Office Desk & College Dorm Room - 12V Portable Cooler & Warmer for Food, Drinks, Skincare, Beauty, Makeup & Cosmetics - AC/DC Small Refrigerator (White)",
+    "url": "https://www.amazon.com/dp/B07Y8TT7N5?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Cooluli",
+    "features": [
+      "Convenient & Lightweight: The Cooluli Classic 10-liter thermoelectric cooler/warmer mini fridge sports a clean, matte finish and a modern profile that\u2019s perfectly portable. This unit measures: 9\" W x 11.25\" D x 13\" H and weighs 7.3 lbs.",
+      "Easily Shift from Cooling to Warming: The simple flip of a switch gets your Classic-10L to go from cooling to warming easily.",
+      "Multiple Functions & Uses: The Classic 10-L is ultra-versatile. Use it anywhere to store food, drinks, beer, snacks, breast milk, insulin, skincare, and medications.",
+      "Advanced Technology: The Classic is dual voltage (100\u2013240V/12V) so it works anywhere in the world. It also features our 100% eco-friendly EcoMax Technology, using minimum energy and preventing frost.",
+      "Cooluli Customer Service & Warranty: All Cooluli products are supported by exceptional customer support and a 1-year limited warranty. Please refer to the Instruction Manual before use."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31PNhs+t3HL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31PNhs+t3HL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31PNhs+t3HL._SL75_.jpg"
+  },
+  {
+    "asin": "B093BNDSCZ",
+    "title": "FRIGIDAIRE Portable 10L, 15-can Mini Fridge Brushed Stainless Rugged Refrigerator, EFMIS183-SS (Renewed)",
+    "url": "https://www.amazon.com/dp/B093BNDSCZ?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Frigidaire",
+    "features": [],
+    "image_large": "https://m.media-amazon.com/images/I/31RlFcwyxuS._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31RlFcwyxuS._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31RlFcwyxuS._SL75_.jpg"
+  },
+  {
+    "asin": "B0CJ2BF9BV",
+    "title": "Enventor 10L Mini Refrigerator Skincare Fridge, AC 120V DC 12V Mini Portable Thermoelectric Cooler and Warmer Refrigerators with LCD Temperature Display for Cosmetics, Food, Office, Christmas (White)",
+    "url": "https://www.amazon.com/dp/B0CJ2BF9BV?tag=lawnblog-20&linkCode=osi&th=1&psc=1",
+    "brand": "Enventor",
+    "features": [
+      "10L Mini Fridge: Holds 10 cans of 330ml, its internal dimensions are (H) 11\" x (W) 7.3\" x (D) 6.7\". This 10L compact Mini Refrigerator has a removable shelf to easily separate snacks and beverages, breast milk, and beauty and skincare products.",
+      "Customize Temperature Control and Dual-core Refrigeration System: Just touch the buttons up and down to adjust and set the temperature you want. The LCD temperature display is easy to read. The dual-core refrigeration system cools your drinks faster than a single-core refrigeration system, better refrigeration effect.",
+      "Cold and Warm: NOTE: Cool Mode: The minimum temperature depends on the surrounding environment. Hot Mode: Used to maintain the original temperature of the food instead of heating it. Equipped with an advanced thermoelectric system, this mini portable refrigerator can cool down to a refreshing 64-68\u00b0F, below ambient temperature keep warm up to a range of 122-140\u00b0F. Customize the temperature control according to your own needs.",
+      "With AC 120V / DC 12V Adapter: AC100-120V power cord for standard wall socket, DC 12V power cord for 12V cigarette lighter in vehicle. This makes our mini portable thermoelectric cooler and warmer refrigerators a great cooler for home and outdoor travel.",
+      "Environmentally Friendly and Safe: Adopt advanced safety technology, smart semiconductor chips. ENVENTOR is committed to providing satisfactory customer service to our customers. If you have any questions during use, please contact us."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/21PC9lz2sCL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/21PC9lz2sCL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/21PC9lz2sCL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
